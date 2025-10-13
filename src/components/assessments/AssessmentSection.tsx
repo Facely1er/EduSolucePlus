@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Users, Laptop, Book } from 'lucide-react';
 import { AssessmentCard } from './AssessmentCard';
@@ -8,29 +7,29 @@ export function AssessmentSection() {
   const assessments = [
     {
       icon: Shield,
-      title: 'Administrator Assessments',
-      description: 'For principals, superintendents, and other administrative staff',
+      title: 'Évaluations Direction',
+      description: 'Pour directeurs, présidents et personnel administratif',
       numAssessments: 5,
       link: '/assessments/administrator'
     },
     {
       icon: Users,
-      title: 'Teacher Assessments',
-      description: 'For classroom teachers and instructional staff',
+      title: 'Évaluations Enseignants',
+      description: 'Pour enseignants et personnel pédagogique',
       numAssessments: 4,
       link: '/assessments/teacher'
     },
     {
       icon: Laptop,
-      title: 'IT Staff Assessments',
-      description: 'For technology coordinators and support personnel',
+      title: 'Évaluations Personnel IT',
+      description: 'Pour coordinateurs technologiques et personnel de support',
       numAssessments: 6,
       link: '/assessments/it-staff'
     },
     {
       icon: Book,
-      title: 'Student Assessments',
-      description: 'For students to learn about digital privacy',
+      title: 'Évaluations Étudiants',
+      description: 'Pour que les étudiants apprennent sur la confidentialité numérique',
       numAssessments: 3,
       link: '/assessments/student'
     }
@@ -41,11 +40,11 @@ export function AssessmentSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Privacy Compliance Assessments
+            Évaluations de Conformité
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Role-specific assessments designed to evaluate your institution's compliance with 
-            educational privacy regulations including FERPA, COPPA, GDPR, and more.
+            Évaluations spécifiques par rôle conçues pour évaluer la conformité de votre institution avec 
+            les réglementations sur la protection des données éducatives, incluant le RGPD, la Loi Ivoirienne, et plus.
           </p>
         </div>
         
@@ -64,17 +63,17 @@ export function AssessmentSection() {
         
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-6">
-            Need help choosing the right assessment? Learn more about our comprehensive approach.
+            Besoin d'aide pour choisir la bonne évaluation ? Découvrez notre approche complète.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/how-it-works" title="Learn how our assessment process works">
+            <Link to="/how-it-works" title="Découvrez comment fonctionnent nos évaluations">
               <Button variant="outline">
-                How assessments work
+                Comment fonctionnent les évaluations
               </Button>
             </Link>
-            <Link to="/resources/professional-guides" title="Access training guides to improve your assessment scores">
+            <Link to="/resources/professional-guides" title="Accédez aux guides pour améliorer vos scores">
               <Button variant="outline">
-                Professional development guides
+                Guides de développement professionnel
               </Button>
             </Link>
           </div>

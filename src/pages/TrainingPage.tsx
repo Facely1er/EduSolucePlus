@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   AlertCircle,
@@ -14,7 +14,8 @@ import {
   Shield,
   FileText,
   Target,
-  GraduationCap
+  GraduationCap,
+  X
 } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -85,7 +86,7 @@ export function TrainingPage() {
 
 
   // More resilient loading logic
-  const shouldShowLoading = React.useCallback(() => {
+  const shouldShowLoading = useCallback(() => {
     // Don't block on user loading if we've forced content or if user loading is taking too long
     if (forceShowContent) return false;
     
@@ -196,7 +197,7 @@ export function TrainingPage() {
           <Breadcrumb />
           <LoadingState
             loading={false}
-            error="Could not load training data. Please try again later."
+            error="Impossible de charger les données de formation. Veuillez réessayer plus tard."
             onRetry={handleRetry}
           />
         </div>
@@ -225,7 +226,7 @@ export function TrainingPage() {
                   <AlertCircle className="h-5 w-5 text-yellow-500 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-sm text-yellow-600 dark:text-yellow-400">
-                      Some features may be limited due to connection issues. User data is still loading.
+                      Certaines fonctionnalités peuvent être limitées en raison de problèmes de connexion. Les données utilisateur sont toujours en cours de chargement.
                     </p>
                   </div>
                 </div>
@@ -237,10 +238,9 @@ export function TrainingPage() {
             {/* Header Section */}
             <div className="mb-8">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-                <h1 className="text-3xl font-bold mb-4"> Professional Development Guides</h1>
+                <h1 className="text-3xl font-bold mb-4">Guides de Développement Professionnel</h1>
                 <p className="text-blue-100 mb-6 max-w-2xl">
-                  Stay compliant and enhance your skills with our comprehensive guides,covering 
-                  privacy regulations, cybersecurity, and best practices for educational technology.
+                  Restez conforme et développez vos compétences avec nos guides complets, couvrant les réglementations sur la protection des données, la cybersécurité et les meilleures pratiques pour les technologies éducatives.
                 </p>
                 
                 {/* Quick Stats */}
@@ -257,7 +257,7 @@ export function TrainingPage() {
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex items-center space-x-2">
                         <TrendingUp className="h-5 w-5" />
-                        <span className="text-sm font-medium">In Progress</span>
+                        <span className="text-sm font-medium">En Cours</span>
                       </div>
                       <p className="text-2xl font-bold mt-2">{inProgressModules.length}</p>
                     </div>
@@ -265,9 +265,9 @@ export function TrainingPage() {
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex items-center space-x-2">
                         <User className="h-5 w-5" />
-                        <span className="text-sm font-medium">Guest Mode</span>
+                        <span className="text-sm font-medium">Mode Invité</span>
                       </div>
-                      <p className="text-2xl font-bold mt-2">Active</p>
+                      <p className="text-2xl font-bold mt-2">Actif</p>
                     </div>
                   )}
                   
@@ -275,7 +275,7 @@ export function TrainingPage() {
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex items-center space-x-2">
                         <Award className="h-5 w-5" /> 
-                        <span className="text-sm font-medium">Guides Completed</span>
+                        <span className="text-sm font-medium">Guides Complétés</span>
                       </div>
                       <p className="text-2xl font-bold mt-2">{completedModules.length}</p>
                     </div>
@@ -283,9 +283,9 @@ export function TrainingPage() {
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex items-center space-x-2">
                         <Shield className="h-5 w-5" />
-                        <span className="text-sm font-medium">Privacy</span>
+                        <span className="text-sm font-medium">Confidentialité</span>
                       </div>
-                      <p className="text-2xl font-bold mt-2">Protected</p>
+                      <p className="text-2xl font-bold mt-2">Protégée</p>
                     </div>
                   )}
                 </div>
@@ -300,7 +300,7 @@ export function TrainingPage() {
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                     <input
                       type="text"
-                      placeholder="Search training modules..."
+                      placeholder="Rechercher des modules de formation..."
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-600 dark:text-white"
                       value={filters.search}
                       onChange={(e) => updateFilter('search', e.target.value)}
@@ -315,9 +315,9 @@ export function TrainingPage() {
                     className="flex items-center space-x-2"
                   >
                     <Filter className="h-4 w-4" />
-                    <span>Filters</span>
+                    <span>Filtres</span>
                     {hasActiveFilters && (
-                      <Badge variant="secondary" className="ml-1">
+                      <Badge className="ml-1 bg-gray-200 dark:bg-gray-700">
                         {Object.values(filters).filter(v => v !== '').length}
                       </Badge>
                     )}
@@ -350,14 +350,14 @@ export function TrainingPage() {
                   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Category
+                        Catégorie
                       </label>
                       <select
                         className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         value={filters.category}
                         onChange={(e) => updateFilter('category', e.target.value)}
                       >
-                        <option value="">All Categories</option>
+                        <option value="">Toutes les catégories</option>
                         {trainingCategories.map(category => (
                           <option key={category.id} value={category.id}>{category.name}</option>
                         ))}
@@ -366,14 +366,14 @@ export function TrainingPage() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Regulation
+                        Réglementation
                       </label>
                       <select
                         className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         value={filters.regulation}
                         onChange={(e) => updateFilter('regulation', e.target.value)}
                       >
-                        <option value="">All Regulations</option>
+                        <option value="">Toutes les réglementations</option>
                         {regulationTypes.map(regulation => (
                           <option key={regulation.id} value={regulation.id}>{regulation.name}</option>
                         ))}
@@ -382,14 +382,14 @@ export function TrainingPage() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Level
+                        Niveau
                       </label>
                       <select
                         className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         value={filters.level}
                         onChange={(e) => updateFilter('level', e.target.value)}
                       >
-                        <option value="">All Levels</option>
+                        <option value="">Tous les niveaux</option>
                         {skillLevels.map(level => (
                           <option key={level.id} value={level.id}>{level.name}</option>
                         ))}
@@ -398,14 +398,14 @@ export function TrainingPage() {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Target Role
+                        Rôle cible
                       </label>
                       <select
                         className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                         value={filters.role}
                         onChange={(e) => updateFilter('role', e.target.value)}
                       >
-                        <option value="">All Roles</option>
+                        <option value="">Tous les rôles</option>
                         {targetRoles.map(role => (
                           <option key={role.id} value={role.id}>{role.name}</option>
                         ))}
@@ -415,17 +415,17 @@ export function TrainingPage() {
                     {user && (
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                          Status
+                          Statut
                         </label>
                         <select
                           className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                           value={filters.status}
                           onChange={(e) => updateFilter('status', e.target.value)}
                         >
-                          <option value="">All Status</option>
-                          <option value="not-started">Not Started</option>
-                          <option value="in-progress">In Progress</option>
-                          <option value="completed">Completed</option>
+                          <option value="">Tous les statuts</option>
+                          <option value="not-started">Non commencé</option>
+                          <option value="in-progress">En cours</option>
+                          <option value="completed">Complété</option>
                         </select>
                       </div>
                     )}
@@ -435,7 +435,7 @@ export function TrainingPage() {
                     <div className="mt-4 flex justify-end">
                       <Button variant="outline" onClick={clearFilters} className="flex items-center space-x-2">
                         <X className="h-4 w-4" />
-                        <span>Clear Filters</span>
+                        <span>Effacer les filtres</span>
                       </Button>
                     </div>
                   )}
@@ -448,19 +448,19 @@ export function TrainingPage() {
               {filteredModules.length === 0 ? (
                 <div className="text-center py-12">
                   <BookOpen className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">No modules found</h3>
+                  <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">Aucun module trouvé</h3>
                   <p className="mt-2 text-gray-500 dark:text-gray-400">
-                    Try adjusting your search or filter criteria.
+                    Essayez d'ajuster vos critères de recherche ou de filtrage.
                   </p>
                   <div className="mt-4 space-y-2">
-                    <Link to="/learning-paths" title="Explore structured learning paths">
+                    <Link to="/learning-paths" title="Explorer les parcours d'apprentissage structurés">
                       <Button variant="outline">
-                        Explore learning paths
+                        Explorer les parcours d'apprentissage
                       </Button>
                     </Link>
-                    <Link to="/assessment" title="Take assessments to get personalized training recommendations">
+                    <Link to="/assessment" title="Passer des évaluations pour obtenir des recommandations personnalisées">
                       <Button variant="outline">
-                        Take assessment for recommendations
+                        Passer une évaluation pour des recommandations
                       </Button>
                     </Link>
                   </div>
@@ -473,7 +473,7 @@ export function TrainingPage() {
                   {filteredModules.map((module) => (
                     <TrainingModuleCard 
                       key={module.id} 
-                      module={module} 
+                      module={module as TrainingModule & { status?: string; progress?: number; lastAccessed?: string }} 
                       viewMode={viewMode}
                       isAuthenticated={!!user}
                     />
@@ -484,27 +484,27 @@ export function TrainingPage() {
             
             {/* Related Content Links */}
             <div className="mt-12 text-center">
-              <h3 className="text-xl font-semibold mb-4">Enhance Your Learning Journey</h3>
+              <h3 className="text-xl font-semibold mb-4">Enrichissez Votre Parcours d'Apprentissage</h3>
               <p className="text-muted-foreground mb-6">
-                Maximize your privacy education with our additional resources and structured learning paths.
+                Maximisez votre formation en protection des données avec nos ressources supplémentaires et parcours d'apprentissage structurés.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/learning-paths" title="Explore structured learning paths for comprehensive skill development">
+                <Link to="/learning-paths" title="Explorer les parcours d'apprentissage structurés pour un développement complet des compétences">
                   <Button variant="outline">
                     <GraduationCap className="mr-2 h-4 w-4" />
-                    Browse learning paths
+                    Parcourir les parcours d'apprentissage
                   </Button>
                 </Link>
-                <Link to="/resources" title="Access downloadable templates and tools">
+                <Link to="/resources" title="Accéder aux modèles et outils téléchargeables">
                   <Button variant="outline">
                     <FileText className="mr-2 h-4 w-4" />
-                    Download resources
+                    Télécharger les ressources
                   </Button>
                 </Link>
-                <Link to="/assessment" title="Assess your current knowledge and get personalized recommendations">
+                <Link to="/assessment" title="Évaluer vos connaissances actuelles et obtenir des recommandations personnalisées">
                   <Button variant="outline">
                     <Target className="mr-2 h-4 w-4" />
-                    Test your knowledge
+                    Testez vos connaissances
                   </Button>
                 </Link>
               </div>
@@ -565,13 +565,13 @@ function TrainingModuleCard({ module, viewMode: _viewMode, isAuthenticated }: Tr
       
       <div className="space-y-3">
         <div className="flex flex-wrap gap-2">
-          <Badge variant="secondary" className="text-xs">
+          <Badge className="text-xs bg-gray-200 dark:bg-gray-700">
             {module.category}
           </Badge>
-          <Badge variant={module.regulation} className="text-xs">
+          <Badge className="text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
             {module.regulation.toUpperCase()}
           </Badge>
-          <Badge level={module.level} className="text-xs">
+          <Badge className="text-xs bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
             {module.level}
           </Badge>
         </div>

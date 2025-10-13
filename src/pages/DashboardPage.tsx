@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Breadcrumb } from '../components/ui/Breadcrumb';
@@ -24,9 +24,9 @@ function RoleSelectionWizard() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-4">Choose Your Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-4">Choisissez Votre Tableau de Bord</h1>
         <p className="text-lg text-muted-foreground">
-          Select the dashboard that matches your role to get started
+          Sélectionnez le tableau de bord qui correspond à votre rôle pour commencer
         </p>
       </div>
       
@@ -37,10 +37,10 @@ function RoleSelectionWizard() {
               <div className="p-3 bg-primary/10 rounded-lg">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Administrator Hub</h3>
+              <h3 className="text-xl font-semibold">Direction Générale</h3>
             </div>
             <p className="text-muted-foreground">
-              Manage users, configure system settings, and oversee security policies
+              Gérer les utilisateurs, configurer les paramètres système et superviser les politiques de sécurité
             </p>
           </div>
         </Link>
@@ -51,10 +51,10 @@ function RoleSelectionWizard() {
               <div className="p-3 bg-primary/10 rounded-lg">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Teacher Hub</h3>
+              <h3 className="text-xl font-semibold">Corps Enseignant</h3>
             </div>
             <p className="text-muted-foreground">
-              Access student progress, manage assessments, and track learning outcomes
+              Accéder à la progression des étudiants, gérer les évaluations et suivre les résultats d'apprentissage
             </p>
           </div>
         </Link>
@@ -65,10 +65,10 @@ function RoleSelectionWizard() {
               <div className="p-3 bg-primary/10 rounded-lg">
                 <Laptop className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">IT Staff Hub</h3>
+              <h3 className="text-xl font-semibold">Personnel IT / DSI</h3>
             </div>
             <p className="text-muted-foreground">
-              Monitor system performance, manage technical infrastructure, and support users
+              Surveiller les performances système, gérer l'infrastructure technique et assister les utilisateurs
             </p>
           </div>
         </Link>
@@ -79,10 +79,10 @@ function RoleSelectionWizard() {
               <div className="p-3 bg-primary/10 rounded-lg">
                 <Book className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Student Hub</h3>
+              <h3 className="text-xl font-semibold">Étudiants</h3>
             </div>
             <p className="text-muted-foreground">
-              Complete assessments, track progress, and access learning materials
+              Compléter les évaluations, suivre la progression et accéder aux ressources d'apprentissage
             </p>
           </div>
         </Link>
@@ -144,7 +144,7 @@ export function DashboardPage() {
           <div className="mb-8 p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-lg">
             <div className="flex items-center justify-center gap-2 text-green-700 dark:text-green-300">
               <CheckCircle className="h-5 w-5" />
-              <span className="font-medium">Demo data has been successfully reset!</span>
+              <span className="font-medium">Les données de démonstration ont été réinitialisées avec succès !</span>
             </div>
           </div>
         )}
@@ -157,7 +157,7 @@ export function DashboardPage() {
                 onClick={() => setShowWizard(false)} 
                 className="text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
               >
-                Skip wizard and show simple view
+                Passer l'assistant et afficher la vue simple
               </button>
             </div>
           </div>
@@ -167,25 +167,25 @@ export function DashboardPage() {
               <Link to="/role/administrator">
                 <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                   <Shield className="h-6 w-6" />
-                  Administrator Hub
+                  Direction Générale
                 </Button>
               </Link>
               <Link to="/role/teacher">
                 <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                   <Users className="h-6 w-6" />
-                  Teacher Hub
+                  Corps Enseignant
                 </Button>
               </Link>
               <Link to="/role/it-staff">
                 <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                   <Laptop className="h-6 w-6" />
-                  IT Staff Hub
+                  Personnel IT / DSI
                 </Button>
               </Link>
               <Link to="/role/student">
                 <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                   <Book className="h-6 w-6" />
-                  Student Hub
+                  Étudiants
                 </Button>
               </Link>
             </div>
@@ -195,7 +195,7 @@ export function DashboardPage() {
                 onClick={() => setShowWizard(true)} 
                 className="text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
               >
-                Show detailed role selection wizard
+                Afficher l'assistant de sélection détaillé
               </button>
             </div>
           </div>
@@ -206,11 +206,11 @@ export function DashboardPage() {
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-2 flex items-center justify-center gap-2">
               <RotateCcw className="h-5 w-5" />
-              Reset Demo Data
+              Réinitialiser les Données de Démonstration
             </h3>
             <p className="text-sm text-muted-foreground mb-4 max-w-md mx-auto text-center">
-              Clear all stored demo data including assessment progress, training completion, and user preferences. 
-              This will reset the application to its initial state (theme settings will be preserved).
+              Effacer toutes les données de démonstration stockées, y compris la progression des évaluations, les formations complétées et les préférences utilisateur. 
+              Cela réinitialisera l'application à son état initial (les paramètres de thème seront conservés).
             </p>
             
             {/* Reset Demo Data Button */}
@@ -221,17 +221,17 @@ export function DashboardPage() {
                 className="mx-auto block border-red-200 text-red-600 hover:bg-red-50 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-950/30"
               >
                 <Trash2 className="mr-2 h-4 w-4" />
-                Reset Demo Data
+                Réinitialiser les données
               </Button>
             ) : (
               <div className="space-y-4">
                 <div className="p-4 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-lg">
                   <div className="flex items-center gap-2 text-red-700 dark:text-red-300 mb-2">
                     <AlertCircle className="h-4 w-4" />
-                    <span className="font-medium">Confirm Reset</span>
+                    <span className="font-medium">Confirmer la réinitialisation</span>
                   </div>
                   <p className="text-sm text-red-600 dark:text-red-400">
-                    This action cannot be undone. All demo data will be permanently removed.
+                    Cette action ne peut pas être annulée. Toutes les données de démonstration seront définitivement supprimées.
                   </p>
                 </div>
                 <div className="flex gap-3 justify-center">
@@ -240,7 +240,7 @@ export function DashboardPage() {
                     onClick={() => setShowResetConfirm(false)}
                     size="sm"
                   >
-                    Cancel
+                    Annuler
                   </Button>
                   <Button 
                     onClick={handleResetDemoData}
@@ -248,7 +248,7 @@ export function DashboardPage() {
                     className="bg-red-600 hover:bg-red-700 text-white"
                   >
                     <Trash2 className="mr-2 h-4 w-4" />
-                    Yes, Reset Data
+                    Oui, réinitialiser
                   </Button>
                 </div>
               </div>
@@ -277,20 +277,20 @@ export function DashboardPage() {
           <div className="text-center bg-white dark:bg-gray-900 rounded-lg border p-12">
             <div className="max-w-md mx-auto">
               <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold mb-4">Dashboard Not Found</h1>
+              <h1 className="text-2xl font-bold mb-4">Tableau de Bord Non Trouvé</h1>
               <p className="text-muted-foreground mb-6">
-                The requested dashboard role could not be found. Please select a valid dashboard from the options below.
+                Le tableau de bord demandé n'a pas pu être trouvé. Veuillez sélectionner un tableau de bord valide parmi les options ci-dessous.
               </p>
               <div className="space-y-3">
                 <Link to="/dashboard">
                   <Button className="w-full">
                     <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back to Dashboard Selection
+                    Retour à la sélection du tableau de bord
                   </Button>
                 </Link>
                 <Link to="/dashboard/administrator">
                   <Button variant="outline" className="w-full">
-                    Administrator Dashboard
+                    Tableau de Bord Direction Générale
                   </Button>
                 </Link>
               </div>
