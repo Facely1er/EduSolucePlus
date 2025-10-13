@@ -37,19 +37,19 @@ export function RegisterPage() {
 
   const validateForm = () => {
     if (!formData.email || !formData.password || !formData.confirmPassword || !formData.fullName || !formData.role) {
-      return 'Please fill in all required fields.';
+      return 'Veuillez remplir tous les champs obligatoires.';
     }
     
     if (formData.password.length < 6) {
-      return 'Password must be at least 6 characters long.';
+      return 'Le mot de passe doit contenir au moins 6 caractères.';
     }
     
     if (formData.password !== formData.confirmPassword) {
-      return 'Passwords do not match.';
+      return 'Les mots de passe ne correspondent pas.';
     }
     
     if (!formData.agreeToTerms) {
-      return 'Please accept the Terms of Service and Privacy Policy.';
+      return 'Veuillez accepter les Conditions d\'Utilisation et la Politique de Confidentialité.';
     }
     
     return null;
@@ -80,19 +80,19 @@ export function RegisterPage() {
       
       if (error) {
         if (error.message.includes("duplicate")) {
-          setError("This email address is already registered. Please sign in instead.");
+          setError("Cette adresse email est déjà enregistrée. Veuillez vous connecter.");
         } else {
-          setError(error.message || "Registration failed. Please try again.");
+          setError(error.message || "Échec de l'inscription. Veuillez réessayer.");
         }
       } else if (data.user) {
-        setSuccess('Account created successfully! Please check your email for verification.');
+        setSuccess('Compte créé avec succès ! Veuillez vérifier votre email pour la confirmation.');
         setTimeout(() => {
           navigate('/login');
         }, 3000);
       }
     } catch (err) {
       console.error('Registration error:', err);
-      setError('An unexpected error occurred during registration. Please try again.');
+      setError('Une erreur inattendue s\'est produite lors de l\'inscription. Veuillez réessayer.');
     } finally {
       setLoading(false);
     }
@@ -113,18 +113,18 @@ export function RegisterPage() {
     
     let strength = 0;
     const checks = [
-      { regex: /.{6,}/, text: 'At least 6 characters' },
-      { regex: /[a-z]/, text: 'Lowercase letter' },
-      { regex: /[A-Z]/, text: 'Uppercase letter' },
-      { regex: /[0-9]/, text: 'Number' },
-      { regex: /[^A-Za-z0-9]/, text: 'Special character' }
+      { regex: /.{6,}/, text: 'Au moins 6 caractères' },
+      { regex: /[a-z]/, text: 'Lettre minuscule' },
+      { regex: /[A-Z]/, text: 'Lettre majuscule' },
+      { regex: /[0-9]/, text: 'Chiffre' },
+      { regex: /[^A-Za-z0-9]/, text: 'Caractère spécial' }
     ];
     
     checks.forEach(check => {
       if (check.regex.test(password)) strength++;
     });
     
-    const strengthText = strength < 2 ? 'Weak' : strength < 4 ? 'Medium' : 'Strong';
+    const strengthText = strength < 2 ? 'Faible' : strength < 4 ? 'Moyen' : 'Fort';
     const strengthColor = strength < 2 ? 'text-red-600' : strength < 4 ? 'text-yellow-600' : 'text-green-600';
     
     return { strength, text: strengthText, color: strengthColor, checks };
@@ -147,14 +147,14 @@ export function RegisterPage() {
                 className="h-12 w-12"
               />
               <div className="text-left">
-                <div className="font-bold text-2xl">EduSoluce™</div>
-                <div className="text-xs text-muted-foreground">by ERMITS</div>
+                <div className="font-bold text-2xl">EduSoluce™ Afrique</div>
+                <div className="text-xs text-muted-foreground">par ERMITS</div>
               </div>
             </Link>
             
-            <h1 className="text-3xl font-bold mb-2">Create your account</h1>
+            <h1 className="text-3xl font-bold mb-2">Créez votre compte</h1>
             <p className="text-muted-foreground">
-              Join thousands of educators staying compliant with privacy regulations
+              Rejoignez des milliers d'éducateurs dans la conformité des données
             </p>
           </div>
 
@@ -164,7 +164,7 @@ export function RegisterPage() {
               {/* Full Name */}
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium mb-2">
-                  Full Name *
+                  Nom Complet *
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -176,7 +176,7 @@ export function RegisterPage() {
                     value={formData.fullName}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Enter your full name"
+                    placeholder="Entrez votre nom complet"
                   />
                 </div>
               </div>
@@ -184,7 +184,7 @@ export function RegisterPage() {
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address *
+                  Adresse Email *
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -197,7 +197,7 @@ export function RegisterPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Enter your email"
+                    placeholder="Entrez votre email"
                   />
                 </div>
               </div>
@@ -205,7 +205,7 @@ export function RegisterPage() {
               {/* Organization */}
               <div>
                 <label htmlFor="organization" className="block text-sm font-medium mb-2">
-                  Organization
+                  Organisation
                 </label>
                 <div className="relative">
                   <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -216,7 +216,7 @@ export function RegisterPage() {
                     value={formData.organization}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Your school or organization"
+                    placeholder="Votre école ou organisation"
                   />
                 </div>
               </div>
@@ -224,7 +224,7 @@ export function RegisterPage() {
               {/* Role */}
               <div>
                 <label htmlFor="role" className="block text-sm font-medium mb-2">
-                  Role *
+                  Rôle *
                 </label>
                 <select
                   id="role"
@@ -234,18 +234,18 @@ export function RegisterPage() {
                   onChange={handleChange}
                   className="w-full px-3 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
                 >
-                  <option value="">Select your role</option>
-                  <option value="administrator">Administrator</option>
-                  <option value="teacher">Teacher</option>
-                  <option value="it-staff">IT Staff</option>
-                  <option value="student">Student</option>
+                  <option value="">Sélectionnez votre rôle</option>
+                  <option value="administrator">Direction Générale</option>
+                  <option value="teacher">Corps Enseignant</option>
+                  <option value="it-staff">Personnel IT / DSI</option>
+                  <option value="student">Étudiant(e)</option>
                 </select>
               </div>
 
               {/* Password */}
               <div>
                 <label htmlFor="password" className="block text-sm font-medium mb-2">
-                  Password *
+                  Mot de Passe *
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -258,7 +258,7 @@ export function RegisterPage() {
                     value={formData.password}
                     onChange={handleChange}
                     className="w-full pl-10 pr-12 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Create a strong password"
+                    placeholder="Créez un mot de passe fort"
                   />
                   <button
                     type="button"
@@ -305,7 +305,7 @@ export function RegisterPage() {
               {/* Confirm Password */}
               <div>
                 <label htmlFor="confirmPassword" className="block text-sm font-medium mb-2">
-                  Confirm Password *
+                  Confirmez le Mot de Passe *
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -318,7 +318,7 @@ export function RegisterPage() {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     className="w-full pl-10 pr-12 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Confirm your password"
+                    placeholder="Confirmez votre mot de passe"
                   />
                   <button
                     type="button"
@@ -333,12 +333,12 @@ export function RegisterPage() {
                     {formData.password === formData.confirmPassword ? (
                       <>
                         <Check className="h-3 w-3 text-green-500" />
-                        <span className="text-green-600">Passwords match</span>
+                        <span className="text-green-600">Les mots de passe correspondent</span>
                       </>
                     ) : (
                       <>
                         <AlertCircle className="h-3 w-3 text-red-500" />
-                        <span className="text-red-600">Passwords do not match</span>
+                        <span className="text-red-600">Les mots de passe ne correspondent pas</span>
                       </>
                     )}
                   </div>
@@ -356,13 +356,13 @@ export function RegisterPage() {
                     className="mt-1 rounded border-gray-300 text-primary focus:ring-primary"
                   />
                   <span className="text-sm text-muted-foreground">
-                    I agree to the{' '}
+                    J'accepte les{' '}
                     <Link to="/terms" className="text-primary hover:text-primary/80 underline">
-                      Terms of Service
+                      Conditions d'Utilisation
                     </Link>{' '}
-                    and{' '}
+                    et la{' '}
                     <Link to="/privacy-policy" className="text-primary hover:text-primary/80 underline">
-                      Privacy Policy
+                      Politique de Confidentialité
                     </Link>
                   </span>
                 </label>
@@ -398,11 +398,11 @@ export function RegisterPage() {
                 {loading ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Creating account...
+                    Création du compte...
                   </>
                 ) : (
                   <>
-                    Create account
+                    Créer un compte
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </>
                 )}
@@ -412,12 +412,12 @@ export function RegisterPage() {
             {/* Sign in link */}
             <div className="mt-6 text-center border-t pt-6">
               <p className="text-sm text-muted-foreground">
-                Already have an account?{' '}
+                Vous avez déjà un compte ?{' '}
                 <Link 
                   to="/login" 
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
-                  Sign in
+                  Se connecter
                 </Link>
               </p>
             </div>

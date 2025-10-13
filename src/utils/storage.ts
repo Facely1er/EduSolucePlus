@@ -153,10 +153,11 @@ class StorageManager {
 
 // Create storage instances
 const localStorage = new StorageManager(window.localStorage);
-const sessionStorage = new StorageManager(window.sessionStorage);
+// sessionStorage available for future use
+// const sessionStorage = new StorageManager(window.sessionStorage);
 
-// Specific storage utilities for auth
-const authStorage = {
+// Specific storage utilities for auth (available for future use)
+/* const authStorage = {
   setToken(token: string, rememberMe = false) {
     const storage = rememberMe ? localStorage : sessionStorage;
     return storage.set(storageKeys.authToken, token, {
@@ -200,10 +201,10 @@ const authStorage = {
     localStorage.remove('last_activity');
     localStorage.remove('last_auth_check');
   }
-};
+}; */
 
-// User preferences storage
-const preferencesStorage = {
+// User preferences storage (available for future use)
+/* const preferencesStorage = {
   setPreferences(preferences: any) {
     return localStorage.set(storageKeys.userPreferences, preferences);
   },
@@ -226,7 +227,7 @@ const preferencesStorage = {
   removePreferences() {
     localStorage.remove(storageKeys.userPreferences);
   }
-};
+}; */
 
 // Progress storage for offline capability
 export const progressStorage = {
@@ -410,8 +411,8 @@ export const notificationStorage = {
   }
 };
 
-// Utility for storage quotas and monitoring
-const storageUtils = {
+// Utility for storage quotas and monitoring (available for future use)
+/* const storageUtils = {
   // Synchronous version - returns fallback estimation immediately
   getQuotaUsage(): { used: number; total: number; percentage: number } {
     // Fallback estimation for immediate synchronous result
@@ -482,5 +483,5 @@ const storageUtils = {
     // Set up interval
     return setInterval(cleanup, intervalMs);
   }
-};
+}; */
 

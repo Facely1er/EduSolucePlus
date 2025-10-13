@@ -1,6 +1,4 @@
 // Business Intelligence and Analytics utilities for privacy management
-import { complianceService } from '../services/complianceService';
-import { dataRightsService } from '../services/dataRightsService';
 
 interface PrivacyMetrics {
   complianceScore: number;
@@ -36,7 +34,7 @@ interface BenchmarkData {
 
 class BusinessIntelligenceService {
   // Generate comprehensive privacy analytics
-  async generatePrivacyAnalytics(organizationId: string): Promise<PrivacyMetrics> {
+  async generatePrivacyAnalytics(_organizationId: string): Promise<PrivacyMetrics> {
     try {
       // Use mock data instead of actual service calls
       const mockMetrics = {
@@ -80,7 +78,7 @@ class BusinessIntelligenceService {
   }
 
   // Generate compliance forecast
-  async generateComplianceForecast(organizationId: string): Promise<ComplianceForecast[]> {
+  async generateComplianceForecast(_organizationId: string): Promise<ComplianceForecast[]> {
     try {
       // Mock forecasting - in production, use ML models with historical data
       const forecasts: ComplianceForecast[] = [

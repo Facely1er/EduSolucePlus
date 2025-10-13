@@ -46,9 +46,8 @@ class RateLimiter {
   }
 
   // Get remaining requests
-  getRemaining(key: string, limit?: number, window?: number): number {
+  getRemaining(key: string, limit?: number, _window?: number): number {
     const maxRequests = limit || this.defaultLimit;
-    const windowMs = window || this.defaultWindow;
     const now = Date.now();
     
     const entry = this.limits.get(key);

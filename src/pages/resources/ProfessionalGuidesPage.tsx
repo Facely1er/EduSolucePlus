@@ -6,12 +6,10 @@ import {
   BookOpen, 
   Play, 
   Clock, 
-  CheckCircle, 
   Star,
   Users,
   ChevronRight,
   Search,
-  Filter,
   Shield,
   Laptop,
   Book

@@ -1,7 +1,7 @@
 {
-  "name": "edusoluce-portal",
-  "description": "EduSoluce™ Privacy Compliance Portal - Educational institution privacy management platform (Note: This platform provides educational resources and tools to assist with privacy compliance but does not guarantee compliance with any specific law or regulation)",
-  "version": "1.0.0",
+  "name": "edusoluce-africa-portal",
+  "description": "EduSoluce™ Afrique - Portail de Conformité pour la Protection des Données - Plateforme de gestion de la protection des données pour les institutions éducatives africaines (Note : Cette plateforme fournit des ressources éducatives et des outils pour assister la conformité en matière de protection des données mais ne garantit pas la conformité avec une loi ou réglementation spécifique)",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {

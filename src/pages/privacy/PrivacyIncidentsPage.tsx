@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 import { 
   AlertTriangle,
   Shield,
-  Clock,
   CheckCircle,
   AlertCircle,
   FileText,
   Users,
   Calendar,
   Plus,
-  Search,
-  Filter,
   Eye,
   Edit,
   Download,
@@ -28,7 +25,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/Ta
 
 export function PrivacyIncidentsPage() {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [showIncidentForm, setShowIncidentForm] = useState(false);
 
   // Mock privacy incidents data
   const privacyIncidents = [
@@ -99,21 +95,6 @@ export function PrivacyIncidentsPage() {
     { id: 'consent_violation', name: 'Consent Violation', color: 'blue', icon: <Users className="h-4 w-4" /> },
     { id: 'vendor_incident', name: 'Vendor Incident', color: 'purple', icon: <Building className="h-4 w-4" /> }
   ];
-
-  const getSeverityBadge = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return <Badge className="bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Critical</Badge>;
-      case 'high':
-        return <Badge className="bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300">High</Badge>;
-      case 'medium':
-        return <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300">Medium</Badge>;
-      case 'low':
-        return <Badge className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Low</Badge>;
-      default:
-        return <Badge>Unknown</Badge>;
-    }
-  };
 
   const totalIncidents = privacyIncidents.length;
   const openIncidents = privacyIncidents.filter(i => i.status !== 'resolved').length;

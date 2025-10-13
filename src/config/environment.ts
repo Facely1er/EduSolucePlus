@@ -40,6 +40,32 @@ export const environment = {
   appUrl: requiredEnvVars.VITE_APP_URL,
   environment: requiredEnvVars.VITE_ENVIRONMENT,
   
+  // African Market Configuration
+  locale: {
+    default: import.meta.env.VITE_APP_LOCALE || 'fr-CI', // French - Côte d'Ivoire
+    timezone: import.meta.env.VITE_APP_TIMEZONE || 'Africa/Abidjan',
+    currency: import.meta.env.VITE_APP_CURRENCY || 'XOF', // West African CFA franc
+    region: import.meta.env.VITE_APP_REGION || 'africa'
+  },
+  
+  // Application Info
+  app: {
+    name: 'EduSoluce™ Afrique',
+    version: '2.0.0',
+    company: 'ERMITS LLC',
+    supportEmail: import.meta.env.VITE_SUPPORT_EMAIL || 'support@edusoluce-africa.com',
+    contactPhone: import.meta.env.VITE_CONTACT_PHONE || ''
+  },
+  
+  // Regulatory Configuration
+  regulatory: {
+    enableRGPD: import.meta.env.VITE_ENABLE_RGPD_MODE === 'true',
+    enableARTCI: import.meta.env.VITE_ENABLE_ARTCI_INTEGRATION === 'true',
+    artciApiUrl: import.meta.env.VITE_ARTCI_API_URL || 'https://www.artci.ci/api',
+    primaryRegulation: 'gdpr', // Can be 'gdpr', 'ci-data-protection', 'malabo-convention'
+    secondaryRegulations: ['ci-data-protection', 'ecowas-data-protection', 'malabo-convention']
+  },
+  
   // Schema configuration
   schema: {
     default: schemaConfig.default,

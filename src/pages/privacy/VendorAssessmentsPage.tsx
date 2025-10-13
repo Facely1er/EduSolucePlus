@@ -2,17 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Building,
-  Shield,
   AlertTriangle,
   AlertCircle,
   CheckCircle,
   Clock,
   FileText,
   Search,
-  Filter,
   Plus,
   Download,
-  ExternalLink,
   Eye,
   Edit,
   Calendar,

@@ -50,23 +50,6 @@ export function ITStaffDashboard() {
     { name: 'Access Controls', status: 'warning', lastCheck: '4 hours ago' }
   ];
 
-  const _recentIncidents = [
-    {
-      id: 'inc-001',
-      title: 'Suspicious Login Attempt',
-      severity: 'medium' as const,
-      status: 'investigating',
-      reportedAt: '2025-01-02 14:30'
-    },
-    {
-      id: 'inc-002',
-      title: 'Outdated Software Alert',
-      severity: 'low' as const,
-      status: 'resolved',
-      reportedAt: '2025-01-01 09:15'
-    }
-  ];
-
   const systemHealth = [
     { system: 'Student Information System', status: 'healthy', uptime: '99.9%' },
     { system: 'Learning Management System', status: 'healthy', uptime: '99.7%' },

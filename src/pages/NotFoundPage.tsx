@@ -15,12 +15,12 @@ export function NotFoundPage() {
   const navigate = useNavigate();
 
   const popularRoutes = [
-    { path: '/', label: 'Home', icon: Home, description: 'Main landing page' },
-    { path: '/dashboard', label: 'Dashboard', icon: Shield, description: 'User dashboard' },
-    { path: '/training', label: 'Training', icon: BookOpen, description: 'Training modules' },
-    { path: '/assessment', label: 'Assessment', icon: Shield, description: 'Compliance assessments' },
-    { path: '/how-it-works', label: 'How It Works', icon: HelpCircle, description: 'Learn about EduSoluce™' },
-    { path: '/contact', label: 'Contact', icon: HelpCircle, description: 'Get support' }
+    { path: '/', label: 'Accueil', icon: Home, description: 'Page principale' },
+    { path: '/dashboard', label: 'Tableau de Bord', icon: Shield, description: 'Tableau de bord utilisateur' },
+    { path: '/training', label: 'Formation', icon: BookOpen, description: 'Modules de formation' },
+    { path: '/assessment', label: 'Évaluation', icon: Shield, description: 'Évaluations de conformité' },
+    { path: '/how-it-works', label: 'Comment ça marche', icon: HelpCircle, description: 'En savoir plus sur EduSoluce™' },
+    { path: '/contact', label: 'Contact', icon: HelpCircle, description: 'Obtenir de l\'aide' }
   ];
 
   return (
@@ -30,18 +30,18 @@ export function NotFoundPage() {
           <div className="mx-auto w-24 h-24 bg-amber-100 dark:bg-amber-900/20 rounded-full flex items-center justify-center mb-6">
             <AlertTriangle className="h-12 w-12 text-amber-600 dark:text-amber-400" />
           </div>
-          <h1 className="text-4xl font-bold text-foreground mb-4">Page Not Found</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-4">Page Non Trouvée</h1>
           <p className="text-xl text-muted-foreground mb-6">
-            The page you're looking for doesn't exist or has been moved.
+            La page que vous recherchez n'existe pas ou a été déplacée.
           </p>
           <p className="text-muted-foreground">
-            Check the URL for typos or use the navigation below to find what you need.
+            Vérifiez l'URL pour les fautes de frappe ou utilisez la navigation ci-dessous pour trouver ce dont vous avez besoin.
           </p>
         </div>
 
         {/* Popular Routes */}
         <div className="mb-8">
-          <h2 className="text-lg font-semibold mb-4">Popular Pages</h2>
+          <h2 className="text-lg font-semibold mb-4">Pages Populaires</h2>
           <div className="grid md:grid-cols-2 gap-3">
             {popularRoutes.map((route) => (
               <Link 
@@ -67,45 +67,45 @@ export function NotFoundPage() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
           <Button onClick={() => navigate(-1)} className="flex-1 sm:flex-none">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Go Back
+            Retour
           </Button>
           <Button asChild className="flex-1 sm:flex-none">
             <Link to="/">
               <Home className="h-4 w-4 mr-2" />
-              Go Home
+              Accueil
             </Link>
           </Button>
           <Button variant="outline" asChild className="flex-1 sm:flex-none">
             <Link to="/contact">
               <HelpCircle className="h-4 w-4 mr-2" />
-              Get Help
+              Obtenir de l'Aide
             </Link>
           </Button>
         </div>
 
         {/* Search Suggestion */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border p-6">
-          <h3 className="text-lg font-semibold mb-3">Can't find what you're looking for?</h3>
+          <h3 className="text-lg font-semibold mb-3">Vous ne trouvez pas ce que vous cherchez ?</h3>
           <p className="text-muted-foreground mb-4">
-            Try searching our site or browse through our main sections to find the information you need.
+            Essayez de rechercher sur notre site ou parcourez nos sections principales pour trouver les informations dont vous avez besoin.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="outline" asChild>
               <Link to="/training">
                 <BookOpen className="h-4 w-4 mr-2" />
-                Browse Training
+                Parcourir Formations
               </Link>
             </Button>
             <Button variant="outline" asChild>
               <Link to="/resources">
                 <Search className="h-4 w-4 mr-2" />
-                Explore Resources
+                Explorer Ressources
               </Link>
             </Button>
             <Button variant="outline" asChild>
               <Link to="/how-it-works">
                 <HelpCircle className="h-4 w-4 mr-2" />
-                Learn More
+                En Savoir Plus
               </Link>
             </Button>
           </div>
@@ -114,14 +114,14 @@ export function NotFoundPage() {
         {/* Contact Support */}
         <div className="mt-8 text-sm text-muted-foreground">
           <p>
-            Still having trouble? Our support team is here to help.
+            Vous rencontrez toujours des difficultés ? Notre équipe d'assistance est là pour vous aider.
           </p>
           <Button 
             variant="link" 
             className="p-0 h-auto text-sm"
             onClick={() => navigate('/contact')}
           >
-            Contact Support
+            Contacter le Support
           </Button>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
   User,
   Mail,
@@ -19,7 +18,6 @@ import { useUser } from '../hooks/useSupabase';
 
 export function ProfilePage() {
   const { user, profile, updateProfile, loading: userLoading } = useUser();
-  const _navigate = useNavigate();
   
   const [formData, setFormData] = useState({
     full_name: profile?.full_name || '',

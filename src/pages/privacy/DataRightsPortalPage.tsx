@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FileText,
@@ -11,12 +11,9 @@ import {
   CheckCircle,
   AlertCircle,
   Plus,
-  Search,
-  Filter,
   User,
   Mail,
   Calendar,
-  ExternalLink,
   GraduationCap,
   HelpCircle
 } from 'lucide-react';

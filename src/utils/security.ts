@@ -42,7 +42,7 @@ export const cspConfig = {
 // Generate CSP header string
 export const generateCSPHeader = (): string => {
   return Object.entries(cspConfig.directives)
-    .filter(([_, value]) => value !== undefined)
+    .filter(([, value]) => value !== undefined)
     .map(([directive, sources]) => 
       `${directive} ${Array.isArray(sources) ? sources.join(' ') : sources}`
     )

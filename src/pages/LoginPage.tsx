@@ -34,19 +34,19 @@ export function LoginPage() {
      
       if (error) {
         if (error.message.includes('credentials')) {
-          setError('Invalid email or password. Please check your credentials and try again.');
+          setError('Email ou mot de passe invalide. Veuillez vérifier vos identifiants et réessayer.');
         } else {
-          setError(error.message || 'Login failed. Please try again.');
+          setError(error.message || 'Échec de la connexion. Veuillez réessayer.');
         }
       } else if (data.user) {
-        setSuccess('Login successful! Redirecting...');
+        setSuccess('Connexion réussie ! Redirection...');
         setTimeout(() => {
           navigate(from, { replace: true });
         }, 1500);
       }
     } catch (err) {
       console.error('Login error:', err);
-      setError('An unexpected error occurred. Please try again.');
+      setError('Une erreur inattendue s\'est produite. Veuillez réessayer.');
     } finally {
       setLoading(false);
     }
@@ -75,14 +75,14 @@ export function LoginPage() {
                 className="h-12 w-12"
               />
               <div className="text-left">
-                <div className="font-bold text-2xl">EduSoluce™</div>
-                <div className="text-xs text-muted-foreground">by ERMITS</div>
+                <div className="font-bold text-2xl">EduSoluce™ Afrique</div>
+                <div className="text-xs text-muted-foreground">par ERMITS</div>
               </div>
             </Link>
             
-            <h1 className="text-3xl font-bold mb-2">Welcome back</h1>
+            <h1 className="text-3xl font-bold mb-2">Bienvenue</h1>
             <p className="text-muted-foreground">
-              Sign in to your account to continue learning
+              Connectez-vous à votre compte pour continuer
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export function LoginPage() {
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address
+                  Adresse Email
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -105,7 +105,7 @@ export function LoginPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Enter your email"
+                    placeholder="Entrez votre email"
                   />
                 </div>
               </div>
@@ -113,7 +113,7 @@ export function LoginPage() {
               {/* Password Field */}
               <div>
                 <label htmlFor="password" className="block text-sm font-medium mb-2">
-                  Password
+                  Mot de Passe
                 </label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -126,7 +126,7 @@ export function LoginPage() {
                     value={formData.password}
                     onChange={handleChange}
                     className="w-full pl-10 pr-12 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Enter your password"
+                    placeholder="Entrez votre mot de passe"
                   />
                   <button
                     type="button"
@@ -148,13 +148,13 @@ export function LoginPage() {
                     onChange={handleChange}
                     className="rounded border-gray-300 text-primary focus:ring-primary"
                   />
-                  <span className="ml-2 text-sm text-muted-foreground">Remember me</span>
+                  <span className="ml-2 text-sm text-muted-foreground">Se souvenir de moi</span>
                 </label>
                 <Link 
                   to="/forgot-password" 
                   className="text-sm text-primary hover:text-primary/80 transition-colors"
                 >
-                  Forgot password?
+                  Mot de passe oublié ?
                 </Link>
               </div>
 
@@ -188,11 +188,11 @@ export function LoginPage() {
                 {loading ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Signing in...
+                    Connexion en cours...
                   </>
                 ) : (
                   <>
-                    Sign in
+                    Se connecter
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </>
                 )}
@@ -202,12 +202,12 @@ export function LoginPage() {
             {/* Sign up link */}
             <div className="mt-6 text-center border-t pt-6">
               <p className="text-sm text-muted-foreground">
-                Don't have an account?{' '}
+                Vous n'avez pas de compte ?{' '}
                 <Link 
                   to="/register" 
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
-                  Sign up for free
+                  S'inscrire gratuitement
                 </Link>
               </p>
             </div>

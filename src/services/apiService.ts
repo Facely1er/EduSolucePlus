@@ -542,7 +542,7 @@ export class ApiService {
   // Health check endpoint
   async healthCheck(): Promise<ApiResponse> {
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('profiles')
         .select('count')
         .limit(1);
@@ -557,7 +557,7 @@ export class ApiService {
           database: 'connected'
         } 
       };
-    } catch (error) {
+    } catch {
       return { 
         success: false, 
         error: 'Health check failed',

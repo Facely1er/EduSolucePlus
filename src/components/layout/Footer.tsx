@@ -75,51 +75,51 @@ export function Footer() {
             <Link to="/" className="flex items-center space-x-2">
               <img 
                 src="/logos/edusoluce-logo.png" 
-                alt="EduSoluce Logo" 
+                alt="Logo EduSoluce" 
                 className="h-[2.7rem] w-[2.7rem]"
               />
               <div className="flex flex-col">
                 <span className="font-bold text-xl leading-none">EduSoluce™</span>
-                <span className="text-xs text-muted-foreground">by ERMITS</span>
+                <span className="text-xs text-muted-foreground">par ERMITS</span>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Empowering educational institutions to navigate privacy regulations and protect 
-              student data with confidence.
+              Accompagner les institutions éducatives africaines dans la protection des données 
+              personnelles et la conformité réglementaire avec confiance.
             </p>
             <div className="pt-2">
               <p className="text-sm text-muted-foreground">
-                © 2025 ERMITS LLC. All rights reserved.
+                © 2025 ERMITS LLC. Tous droits réservés.
               </p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-medium text-sm mb-4">Quick Links</h3>
+            <h3 className="font-medium text-sm mb-4">Liens Rapides</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link to="/dashboard" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                   <LayoutDashboard className="h-4 w-4" />
-                  Role Hubs
+                  Tableaux de Bord
                 </Link>
               </li>
               <li>
                 <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                   <Database className="h-4 w-4" />
-                  Privacy Portal
+                  Portail Vie Privée
                 </Link>
               </li>
               <li>
                 <Link to="/how-it-works" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                   <HelpCircle className="h-4 w-4" />
-                  How It Works
+                  Comment ça marche
                 </Link>
               </li>
               <li>
                 <Link to="/resources" className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                   <BookOpen className="h-4 w-4" />
-                  Resources
+                  Ressources
                 </Link>
               </li>
               <li>
@@ -133,30 +133,30 @@ export function Footer() {
           
           {/* Legal Links */}
           <div>
-            <h3 className="font-medium text-sm mb-4">Legal & Resources</h3>
+            <h3 className="font-medium text-sm mb-4">Mentions Légales & Ressources</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link to="/legal" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="View legal notices and disclaimers">
+                <Link to="/legal" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Consulter les mentions légales">
                   <GavelIcon className="h-4 w-4" />
-                  Legal Notices
+                  Mentions Légales
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Read our terms of service">
+                <Link to="/terms" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Lire nos conditions d'utilisation">
                   <FileText className="h-4 w-4" />
-                  Terms of Service
+                  Conditions d'Utilisation
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Read our privacy policy">
+                <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Lire notre politique de confidentialité">
                   <Shield className="h-4 w-4" />
-                  Privacy Policy
+                  Politique de Confidentialité
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Contact our support team">
+                <Link to="/contact" className="text-muted-foreground hover:text-foreground flex items-center gap-2" title="Contacter notre équipe de support">
                   <Mail className="h-4 w-4" />
-                  Contact Support
+                  Contacter le Support
                 </Link>
               </li>
             </ul>
@@ -164,16 +164,16 @@ export function Footer() {
           
           {/* Newsletter */}
           <div>
-            <h3 className="font-medium text-sm mb-4">Subscribe to Updates</h3>
+            <h3 className="font-medium text-sm mb-4">S'abonner aux Mises à Jour</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Stay informed about new regulations and compliance resources.
+              Restez informé des nouvelles réglementations et ressources de conformité.
             </p>
             <div className="space-y-4">
               <div className="flex gap-2">
                 <input 
                   type="email" 
                   className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
-                  placeholder="Your email" 
+                  placeholder="Votre adresse email" 
                   value={email}
                   onChange={handleEmailChange}
                   disabled={isSubscribing}
@@ -182,12 +182,12 @@ export function Footer() {
                   {isSubscribing ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Subscribing...
+                      Envoi...
                     </>
                   ) : (
                     <>
                       <Mail className="h-4 w-4 mr-2" />
-                      Subscribe
+                      S'abonner
                     </>
                   )}
                 </Button>
@@ -197,7 +197,7 @@ export function Footer() {
               {subscriptionSuccess && (
                 <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-2 rounded">
                   <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                  <span>Thank you! You've been successfully subscribed.</span>
+                  <span>Merci ! Vous êtes maintenant abonné à nos mises à jour.</span>
                 </div>
               )}
               

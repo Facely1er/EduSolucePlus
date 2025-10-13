@@ -6,16 +6,16 @@ import { TextCarousel } from '../ui/TextCarousel';
 
 export function HeroSection() {
   const carouselTexts = [
-    "EduSoluce™ assists educational institutions in protecting student data and maintaining compliance with FERPA, COPPA, GDPR, and other privacy regulations.",
-    "Navigate the complex world of educational privacy regulations with confidence and clarity.",
-    "Address compliance challenges to build trust with students and parents.",
-    "Manage privacy with role-specific guidance for administrators, teachers, and IT staff."
+    "EduSoluce™ accompagne les institutions éducatives africaines dans la protection des données personnelles et la conformité au RGPD, aux lois locales et aux réglementations internationales.",
+    "Naviguez avec confiance dans le monde complexe des réglementations sur la vie privée dans l'éducation.",
+    "Relevez les défis de conformité pour renforcer la confiance des étudiants, parents et partenaires.",
+    "Gérez la protection des données avec des orientations spécifiques pour administrateurs, enseignants et personnel IT."
   ];
 
   const features = [
-    'Customized role evaluations',
-    'Ready-to-use resources & toolkits',
-    'Interactive learning modules'
+    'Évaluations personnalisées par rôle',
+    'Ressources et boîtes à outils prêtes à l\'emploi',
+    'Modules d\'apprentissage interactifs'
   ];
 
   return (
@@ -31,13 +31,13 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center justify-center bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full px-4 py-2 mb-8">
           <Shield className="h-4 w-4 mr-2" />
-          <span className="text-sm font-medium">Educational Privacy Simplified</span>
+          <span className="text-sm font-medium">Protection des Données Simplifiée pour l'Éducation</span>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-         Simplified Compliance{' '}
+         Conformité Simplifiée{' '}
           <br className="hidden md:block" />
-          <span className="text-primary-600 dark:text-primary-400">With Confidence</span>
+          <span className="text-primary-600 dark:text-primary-400">En Toute Confiance</span>
         </h1>
 
         <TextCarousel 
@@ -49,12 +49,12 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <Link to="/onboarding">
             <Button size="lg" className="font-medium">
-              Start your privacy journey <ArrowRight className="ml-2 h-4 w-4" />
+              Commencez votre parcours <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
           <Link to="/assessment">
-            <Button size="lg" variant="outline" className="font-medium" title="Evaluate your privacy compliance knowledge">
-              Take a privacy assessment
+            <Button size="lg" variant="outline" className="font-medium" title="Évaluez vos connaissances en matière de conformité">
+              Faites une évaluation
             </Button>
           </Link>
         </div>

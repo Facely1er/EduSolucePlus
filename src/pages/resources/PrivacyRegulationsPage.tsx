@@ -8,8 +8,6 @@ import {
   ChevronRight,
   BookOpen,
   Clock,
-  CheckCircle,
-  AlertCircle,
   Info
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';

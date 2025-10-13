@@ -400,62 +400,52 @@ class ExportService {
     let content = '';
     let filename = '';
     let fileType = 'txt';
-    let mimeType = 'text/plain;charset=utf-8;';
 
     switch (type) {
       case 'ferpa-guide':
         content = this.generateFERPAGuide();
         filename = 'FERPA-Compliance-Guide';
         fileType = 'pdf';
-        mimeType = 'application/pdf';
         break;
       case 'coppa-checklist':
         content = this.generateCOPPAChecklist();
         filename = 'COPPA-Compliance-Checklist';
         fileType = 'pdf';
-        mimeType = 'application/pdf';
         break;
       case 'privacy-policy':
         content = this.generatePrivacyPolicyTemplate();
         filename = 'Privacy-Policy-Template';
         fileType = 'docx';
-        mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
         break;
       case 'incident-response':
         content = this.generateIncidentResponsePlan();
         filename = 'Incident-Response-Plan';
         fileType = 'docx';
-        mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
         break;
       case 'vendor-assessment':
         content = this.generateVendorAssessmentTool();
         filename = 'Vendor-Assessment-Tool';
         fileType = 'pdf';
-        mimeType = 'application/pdf';
         break;
       case 'consent-forms':
         content = this.generateConsentFormTemplates();
         filename = 'Consent-Form-Templates';
         fileType = 'docx';
-        mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
         break;
       case 'data-inventory':
         content = this.generateDataInventoryTemplate();
         filename = 'Student-Data-Inventory-Template';
         fileType = 'xlsx';
-        mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
         break;
       case 'breach-response':
         content = this.generateBreachResponseToolkit();
         filename = 'Data-Breach-Response-Toolkit';
         fileType = 'zip';
-        mimeType = 'application/zip';
         break;
       case 'training-materials':
         content = this.generateTrainingMaterials();
         filename = 'Privacy-Training-Materials';
         fileType = 'pdf';
-        mimeType = 'application/pdf';
         break;
     }
 

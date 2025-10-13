@@ -18,7 +18,7 @@ export function ForgotPasswordPage() {
     setSuccess(null);
 
     if (!email) {
-      setError('Please enter your email address.');
+      setError('Veuillez entrer votre adresse email.');
       setLoading(false);
       return;
     }
@@ -31,12 +31,12 @@ export function ForgotPasswordPage() {
       if (error) {
         setError(error.message);
       } else {
-        setSuccess('Password reset link sent! Check your email inbox.');
+        setSuccess('Lien de réinitialisation envoyé ! Vérifiez votre boîte mail.');
         setEmail(''); // Clear email field after successful submission
       }
     } catch (err) {
       console.error('Password reset error:', err);
-      setError('An unexpected error occurred. Please try again.');
+      setError('Une erreur inattendue s\'est produite. Veuillez réessayer.');
     } finally {
       setLoading(false);
     }
@@ -57,14 +57,14 @@ export function ForgotPasswordPage() {
                 className="h-12 w-12"
               />
               <div className="text-left">
-                <div className="font-bold text-2xl">EduSoluce™</div>
-                <div className="text-xs text-muted-foreground">by ERMITS</div>
+                <div className="font-bold text-2xl">EduSoluce™ Afrique</div>
+                <div className="text-xs text-muted-foreground">par ERMITS</div>
               </div>
             </Link>
             
-            <h1 className="text-3xl font-bold mb-2">Forgot Password</h1>
+            <h1 className="text-3xl font-bold mb-2">Mot de Passe Oublié</h1>
             <p className="text-muted-foreground">
-              Enter your email address and we'll send you a link to reset your password.
+              Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export function ForgotPasswordPage() {
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address
+                  Adresse Email
                 </label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -86,7 +86,7 @@ export function ForgotPasswordPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 border border-input rounded-md bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="Enter your email"
+                    placeholder="Entrez votre email"
                   />
                 </div>
               </div>
@@ -121,11 +121,11 @@ export function ForgotPasswordPage() {
                 {loading ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Sending link...
+                    Envoi en cours...
                   </>
                 ) : (
                   <>
-                    Send Reset Link
+                    Envoyer le Lien
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </>
                 )}
@@ -135,12 +135,12 @@ export function ForgotPasswordPage() {
             {/* Back to Sign In */}
             <div className="mt-6 text-center border-t pt-6">
               <p className="text-sm text-muted-foreground">
-                Remember your password?{' '}
+                Vous vous souvenez de votre mot de passe ?{' '}
                 <Link 
                   to="/login" 
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
-                  Back to Sign In
+                  Retour à la Connexion
                 </Link>
               </p>
             </div>

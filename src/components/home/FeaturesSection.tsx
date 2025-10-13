@@ -7,38 +7,38 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Shield,
-      title: 'Privacy Assessments',
-      description: 'Role-specific assessments to evaluate your institution\'s compliance with FERPA, COPPA, GDPR and more.',
+      title: 'Évaluations de Conformité',
+      description: 'Évaluations spécifiques par rôle pour évaluer la conformité de votre institution au RGPD, loi ivoirienne et autres réglementations.',
       link: '/assessment'
     },
     {
       icon: BookOpen,
-      title: 'Resource Library',
-      description: 'Access downloadable templates, checklists, and guides to implement best practices.',
+      title: 'Bibliothèque de Ressources',
+      description: 'Accédez aux modèles téléchargeables, listes de contrôle et guides pour mettre en œuvre les meilleures pratiques.',
       link: '/resources'
     },
     {
       icon: GraduationCap,
-      title: 'Professionnal Guides',
-      description: 'Interactive guidance content for staff development on privacy and data protection.',
+      title: 'Guides Professionnels',
+      description: 'Contenu de formation interactif pour le développement du personnel sur la protection des données.',
       link: '/training'
     },
     {
       icon: LineChart,
-      title: 'Compliance Dashboard',
-      description: 'Track your progress and identify areas for improvement with visual analytics.',
+      title: 'Tableau de Bord de Conformité',
+      description: 'Suivez vos progrès et identifiez les domaines d\'amélioration avec des analyses visuelles.',
       link: '/dashboard'
     },
     {
       icon: Database,
-      title: 'Privacy Self-Service Portal',
-      description: 'Manage data rights requests, consent records, and compliance obligations in one place.',
+      title: 'Portail Libre-Service Vie Privée',
+      description: 'Gérez les demandes de droits, registres de consentement et obligations de conformité en un seul endroit.',
       link: '/privacy'
     },
     {
       icon: Users,
-      title: 'Stakeholder Management',
-      description: 'Provide appropriate access to students, parents, and staff for their privacy rights.',
+      title: 'Gestion des Parties Prenantes',
+      description: 'Fournissez un accès approprié aux étudiants, parents et personnel pour leurs droits numériques.',
       link: '/privacy/stakeholders'
     }
   ];
@@ -47,7 +47,7 @@ export function FeaturesSection() {
     <section className="py-16 px-6 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Simplify Educational Compliance
+          Simplifiez la Conformité Éducative
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ export function FeaturesSection() {
               key={index}
               to={feature.link}
               className="group"
-              title={`Learn more about ${feature.title}`}
+              title={`En savoir plus sur ${feature.title}`}
             >
               <div className="rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-200 hover:shadow-md group-hover:border-primary-300">
                 <div className="flex flex-col space-y-1.5 p-6 pb-2">

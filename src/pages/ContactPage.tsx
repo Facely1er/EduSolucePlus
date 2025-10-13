@@ -20,7 +20,7 @@ export function ContactPage() {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+    alert('Merci pour votre message ! Nous vous répondrons dans les 24 heures.');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -31,10 +31,10 @@ export function ContactPage() {
   };
 
   const supportCategories = [
-    { value: 'general', label: 'General Inquiry', icon: <MessageCircle className="h-4 w-4" /> },
-    { value: 'technical', label: 'Technical Support', icon: <Bug className="h-4 w-4" /> },
-    { value: 'training', label: 'Training Questions', icon: <HelpCircle className="h-4 w-4" /> },
-    { value: 'compliance', label: 'Compliance Guidance', icon: <HelpCircle className="h-4 w-4" /> }
+    { value: 'general', label: 'Demande Générale', icon: <MessageCircle className="h-4 w-4" /> },
+    { value: 'technical', label: 'Support Technique', icon: <Bug className="h-4 w-4" /> },
+    { value: 'training', label: 'Questions Formation', icon: <HelpCircle className="h-4 w-4" /> },
+    { value: 'compliance', label: 'Conseils Conformité', icon: <HelpCircle className="h-4 w-4" /> }
   ];
 
   return (
@@ -42,9 +42,9 @@ export function ContactPage() {
       <Breadcrumb />
       
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Contact Support</h1>
+        <h1 className="text-3xl font-bold mb-2">Contactez-nous</h1>
         <p className="text-muted-foreground">
-          Get help with privacy compliance, technical issues, or general questions about EduSoluce.
+          Obtenez de l'aide pour la conformité, les problèmes techniques ou des questions générales sur EduSoluce.
         </p>
       </div>
 
@@ -52,13 +52,13 @@ export function ContactPage() {
         {/* Contact Form */}
         <div className="lg:col-span-2">
           <div className="bg-gray-50 dark:bg-gray-950 rounded-lg border p-6">
-            <h2 className="text-xl font-semibold mb-6">Send us a message</h2>
+            <h2 className="text-xl font-semibold mb-6">Envoyez-nous un message</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Full Name *
+                    Nom Complet *
                   </label>
                   <input
                     type="text"
@@ -68,13 +68,13 @@ export function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
-                    placeholder="Your full name"
+                    placeholder="Votre nom complet"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address *
+                    Adresse Email *
                   </label>
                   <input
                     type="email"
@@ -84,7 +84,7 @@ export function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
-                    placeholder="your.email@school.edu"
+                    placeholder="votre.email@ecole.ci"
                   />
                 </div>
               </div>
@@ -101,13 +101,13 @@ export function ContactPage() {
                     value={formData.institution}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
-                    placeholder="Your school or district"
+                    placeholder="Votre école ou université"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="role" className="block text-sm font-medium mb-2">
-                    Your Role
+                    Votre Rôle
                   </label>
                   <select
                     id="role"
@@ -116,13 +116,13 @@ export function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
                   >
-                    <option value="">Select your role</option>
-                    <option value="administrator">Administrator</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="it-staff">IT Staff</option>
-                    <option value="student">Student</option>
+                    <option value="">Sélectionnez votre rôle</option>
+                    <option value="administrator">Direction Générale</option>
+                    <option value="teacher">Corps Enseignant</option>
+                    <option value="it-staff">Personnel IT / DSI</option>
+                    <option value="student">Étudiant(e)</option>
                     <option value="parent">Parent</option>
-                    <option value="other">Other</option>
+                    <option value="other">Autre</option>
                   </select>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export function ContactPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="category" className="block text-sm font-medium mb-2">
-                    Category *
+                    Catégorie *
                   </label>
                   <select
                     id="category"
@@ -150,7 +150,7 @@ export function ContactPage() {
                 
                 <div>
                   <label htmlFor="priority" className="block text-sm font-medium mb-2">
-                    Priority
+                    Priorité
                   </label>
                   <select
                     id="priority"
@@ -159,9 +159,9 @@ export function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
                   >
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
+                    <option value="low">Basse</option>
+                    <option value="medium">Moyenne</option>
+                    <option value="high">Haute</option>
                     <option value="urgent">Urgent</option>
                   </select>
                 </div>
@@ -169,7 +169,7 @@ export function ContactPage() {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject *
+                  Sujet *
                 </label>
                 <input
                   type="text"
@@ -179,7 +179,7 @@ export function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
-                  placeholder="Brief description of your inquiry"
+                  placeholder="Brève description de votre demande"
                 />
               </div>
 
@@ -195,13 +195,13 @@ export function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm resize-none"
-                  placeholder="Please provide details about your question or issue..."
+                  placeholder="Veuillez fournir des détails sur votre question ou problème..."
                 />
               </div>
 
               <Button type="submit" className="w-full">
                 <Send className="mr-2 h-4 w-4" />
-                Send Message
+                Envoyer le Message
               </Button>
             </form>
           </div>
@@ -211,12 +211,12 @@ export function ContactPage() {
         <div className="space-y-6">
           {/* Contact Details */}
           <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
-            <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
+            <h3 className="text-lg font-semibold mb-4">Nous Contacter</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary-600 mt-0.5" />
                 <div>
-                  <p className="font-medium">Email Support</p>
+                  <p className="font-medium">Support Email</p>
                   <p className="text-sm text-muted-foreground">support@ermits.com</p>
                 </div>
               </div>
@@ -224,16 +224,16 @@ export function ContactPage() {
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary-600 mt-0.5" />
                 <div>
-                  <p className="font-medium">Phone Support</p>
+                  <p className="font-medium">Support Téléphonique</p>
                   <p className="text-sm text-muted-foreground">+ 1 (240) 599-0102</p>
-                  <p className="text-xs text-muted-foreground">Monday-Friday, 8 AM - 6 PM EST</p>
+                  <p className="text-xs text-muted-foreground">Lun-Ven, 8h - 18h EST</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary-600 mt-0.5" />
                 <div>
-                  <p className="font-medium">Office Address</p>
+                  <p className="font-medium">Adresse Bureau</p>
                   <p className="text-sm text-muted-foreground">
                     Gaithersburg, MD 20877 
                   </p>
@@ -246,61 +246,61 @@ export function ContactPage() {
           <div className="bg-gray-50 dark:bg-gray-950 rounded-lg border p-6">
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Clock className="h-5 w-5 mr-2" />
-              Support Hours
+              Heures d'Assistance
             </h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span>Monday - Friday</span>
-                <span className="text-muted-foreground">8:00 AM - 6:00 PM EST</span>
+                <span>Lundi - Vendredi</span>
+                <span className="text-muted-foreground">8h00 - 18h00 EST</span>
               </div>
               <div className="flex justify-between">
-                <span>Saturday</span>
-                <span className="text-muted-foreground">10:00 AM - 2:00 PM EST</span>
+                <span>Samedi</span>
+                <span className="text-muted-foreground">10h00 - 14h00 EST</span>
               </div>
               <div className="flex justify-between">
-                <span>Sunday</span>
-                <span className="text-muted-foreground">Closed</span>
+                <span>Dimanche</span>
+                <span className="text-muted-foreground">Fermé</span>
               </div>
             </div>
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
               <p className="text-xs text-blue-700 dark:text-blue-300">
-                For urgent issues outside business hours, please mark your inquiry as "Urgent" and we'll respond as soon as possible.
+                Pour les problèmes urgents en dehors des heures de bureau, veuillez marquer votre demande comme "Urgente" et nous vous répondrons dès que possible.
               </p>
             </div>
           </div>
 
           {/* FAQ Link */}
           <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 rounded-lg border p-6">
-            <h3 className="text-lg font-semibold mb-2">Quick Answers</h3>
+            <h3 className="text-lg font-semibold mb-2">Réponses Rapides</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Check our frequently asked questions for immediate answers to common inquiries.
+              Consultez notre foire aux questions pour des réponses immédiates aux questions courantes.
             </p>
             <Link to="/faq">
               <Button variant="outline" className="w-full">
                 <HelpCircle className="mr-2 h-4 w-4" />
-                View FAQ
+                Voir la FAQ
               </Button>
             </Link>
             
             <div className="mt-4 pt-4 border-t">
-              <h4 className="font-medium mb-2">Self-Service Resources</h4>
+              <h4 className="font-medium mb-2">Ressources en Libre-Service</h4>
               <div className="space-y-2">
-                <Link to="/how-it-works" title="Learn how our platform works" className="block">
+                <Link to="/how-it-works" title="Découvrez comment fonctionne notre plateforme" className="block">
                   <Button variant="ghost" size="sm" className="w-full justify-start">
                     <BookOpen className="h-4 w-4 mr-2" />
-                    How EduSoluce Works
+                    Comment Fonctionne EduSoluce
                   </Button>
                 </Link>
-                <Link to="/training" title="Access self-paced training guides" className="block">
+                <Link to="/training" title="Accédez aux guides de formation" className="block">
                   <Button variant="ghost" size="sm" className="w-full justify-start">
                     <GraduationCap className="h-4 w-4 mr-2" />
-                    Self-Paced Training
+                    Formation Autonome
                   </Button>
                 </Link>
-                <Link to="/resources" title="Download helpful resources and templates" className="block">
+                <Link to="/resources" title="Téléchargez des ressources et modèles utiles" className="block">
                   <Button variant="ghost" size="sm" className="w-full justify-start">
                     <FileText className="h-4 w-4 mr-2" />
-                    Resource Library
+                    Bibliothèque de Ressources
                   </Button>
                 </Link>
               </div>

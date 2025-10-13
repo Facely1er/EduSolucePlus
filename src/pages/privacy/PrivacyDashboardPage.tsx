@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Shield,
@@ -9,14 +8,12 @@ import {
   CheckCircle,
   Clock,
   BarChart3,
-  TrendingUp,
   ArrowRight,
   Calendar,
   Database,
   Lock,
   Eye,
-  Info,
-  AlertCircle
+  Info
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';

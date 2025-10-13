@@ -1,69 +1,66 @@
-# EduSoluce™ - Privacy Self-Service Portal for Educational Institutions
+# EduSoluce™ Afrique - Portail Libre-Service de Protection des Données pour les Institutions Éducatives
 
-## Overview
-EduSoluce™ is a privacy compliance assistance platform designed specifically for educational institutions and their stakeholders. It provides a self-service portal to help manage compliance obligations, data rights execution, and privacy governance across multiple North American privacy regulations. Note: This platform is designed to assist with compliance efforts but does not guarantee compliance with any specific law or regulation.
+## Aperçu
+EduSoluce™ Afrique est une plateforme d'assistance à la conformité en matière de protection des données, conçue spécifiquement pour les institutions éducatives africaines et leurs parties prenantes. Elle fournit un portail libre-service pour aider à gérer les obligations de conformité, l'exécution des droits des personnes concernées et la gouvernance de la protection des données selon le RGPD, les lois nationales africaines et les réglementations internationales. Note : Cette plateforme est conçue pour assister les efforts de conformité mais ne garantit pas la conformité avec une loi ou réglementation spécifique.
 
-## Key Features
+## Fonctionnalités Clés
 
-### Privacy Self-Service Portal
-- **Data Rights Management**: Handle subject access requests, data deletion, correction, and portability
-- **Compliance Obligations Tracking**: Monitor and manage regulatory requirements across multiple privacy laws
-- **Privacy Incident Management**: Report, track, and resolve privacy incidents and data breaches
-- **Vendor Privacy Assessments**: Evaluate and monitor third-party vendors for privacy compliance
-- **Consent Management**: Track parental consent and student privacy preferences
-- **Stakeholder Access Control**: Manage access levels for different institutional stakeholders
+### Portail Libre-Service de Protection des Données
+- **Gestion des Droits des Personnes** : Traiter les demandes d'accès, de suppression, de rectification et de portabilité des données
+- **Suivi des Obligations de Conformité** : Surveiller et gérer les exigences réglementaires à travers plusieurs lois sur la protection des données
+- **Gestion des Incidents de Sécurité** : Signaler, suivre et résoudre les incidents de sécurité et les violations de données
+- **Évaluations de Confidentialité des Fournisseurs** : Évaluer et surveiller les tiers pour la conformité en matière de protection des données
+- **Gestion du Consentement** : Suivre le consentement des étudiants et les préférences de confidentialité
+- **Contrôle d'Accès des Parties Prenantes** : Gérer les niveaux d'accès pour différentes parties prenantes institutionnelles
 
-### Supported Regulations
-- **FERPA** - Family Educational Rights and Privacy Act
-- **COPPA** - Children's Online Privacy Protection Act
-- **CCPA/CPRA** - California Consumer Privacy Act and Privacy Rights Act
-- **PIPEDA** - Personal Information Protection and Electronic Documents Act (Canada)
-- **BIPA** - Illinois Biometric Information Privacy Act
-- **SHIELD Act** - New York Stop Hacks and Improve Electronic Data Security
-- **SOPIPA** - Student Online Personal Information Protection Act
-- **VCDPA** - Virginia Consumer Data Protection Act
-- **GDPR** - General Data Protection Regulation (for international students)
+### Réglementations Prises en Charge
+- **RGPD** - Règlement Général sur la Protection des Données (Union Européenne)
+- **Loi Ivoirienne** - Loi n° 2013-450 relative à la protection des données personnelles (Côte d'Ivoire)
+- **Convention de Malabo** - Convention de l'Union Africaine sur la Cybersécurité et la Protection des Données Personnelles
+- **CEDEAO** - Acte Additionnel de la CEDEAO sur la Protection des Données Personnelles
+- **CNIL** - Mise en œuvre française du RGPD (pour les partenariats avec la France)
 
-### Role-Based Access
-- **Administrators**: Institution-wide compliance management and oversight
-- **Teachers**: Classroom privacy practices and student data handling
-- **IT Staff**: Technical security measures and system compliance
-- **Students**: Privacy rights education and personal data management
-- **Parents/Guardians**: Access to student information and consent management
+### Accès Basé sur les Rôles
+- **Direction Générale** : Gestion de la conformité institutionnelle et supervision
+- **Corps Enseignant / Chercheurs** : Pratiques de protection des données en enseignement et recherche
+- **Personnel IT / DSI** : Mesures techniques de sécurité et conformité des systèmes
+- **DPO / DPD** : Délégué à la Protection des Données - conformité et relations avec les autorités
+- **Étudiants** : Éducation aux droits en matière de protection des données et gestion des données personnelles
 
-### Core Capabilities
-- Role-specific privacy assessments and training
-- Interactive compliance dashboard with real-time metrics
-- Automated compliance obligation tracking and reminders
-- Privacy incident response and breach notification management tools
-- Vendor privacy assessment tools
-- Digital consent collection and renewal management
-- Privacy impact assessment workflows
-- Multi-stakeholder access controls and permissions
+### Capacités Principales
+- Évaluations et formations spécifiques aux rôles en matière de protection des données
+- Tableau de bord de conformité interactif avec métriques en temps réel
+- Suivi automatisé des obligations de conformité et rappels
+- Outils de gestion des incidents de sécurité et notification de violation
+- Outils d'évaluation de la confidentialité des fournisseurs
+- Gestion de la collecte et du renouvellement du consentement numérique
+- Flux de travail pour les analyses d'impact sur la vie privée (AIPD/DPIA)
+- Contrôles d'accès et permissions multi-parties prenantes
 
-**Important Disclaimer**: These tools are designed to assist with privacy compliance efforts but do not guarantee compliance with any specific law or regulation. Educational institutions should consult with qualified legal counsel regarding their specific compliance requirements.
+**Avertissement Important** : Ces outils sont conçus pour assister les efforts de conformité en matière de protection des données mais ne garantissent pas la conformité avec une loi ou réglementation spécifique. Les institutions éducatives doivent consulter un conseiller juridique qualifié concernant leurs exigences de conformité spécifiques.
 
-## Technology Stack
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: Supabase (PostgreSQL)
-- **Authentication**: Supabase Auth
-- **Deployment**: Netlify
+## Stack Technologique
+- **Frontend** : React, TypeScript, Tailwind CSS
+- **Backend** : Supabase (PostgreSQL)
+- **Authentification** : Supabase Auth
+- **Déploiement** : Netlify
 
-## Getting Started
-1. Visit the platform and select your role (Administrator, Teacher, IT Staff, or Student)
-2. Complete role-specific privacy assessments to identify compliance gaps
-3. Access training modules and resources tailored to your responsibilities
-4. Use the privacy portal to manage data rights, obligations, and vendor assessments
-5. Monitor ongoing compliance through the comprehensive dashboard
+## Démarrage
+1. Visitez la plateforme et sélectionnez votre rôle (Direction Générale, Corps Enseignant, Personnel IT, DPO, ou Étudiant)
+2. Complétez les évaluations de protection des données spécifiques à votre rôle pour identifier les lacunes de conformité
+3. Accédez aux modules de formation et ressources adaptés à vos responsabilités
+4. Utilisez le portail de protection des données pour gérer les droits, obligations et évaluations des fournisseurs
+5. Surveillez la conformité continue via le tableau de bord complet
 
-## Educational Institution Focus
-EduSoluce™ is specifically designed for educational environments, understanding the unique challenges of:
-- Student data protection across age groups
-- Parent/guardian rights and consent management
-- Educational technology vendor compliance assistance
-- Multi-jurisdictional privacy requirements
-- Stakeholder access and transparency needs
+## Focus sur les Institutions Éducatives Africaines
+EduSoluce™ Afrique est spécifiquement conçu pour les environnements éducatifs africains, en comprenant les défis uniques de :
+- Protection des données étudiants à travers différents groupes d'âge
+- Gestion des droits et du consentement
+- Assistance à la conformité des fournisseurs de technologie éducative
+- Exigences de protection des données multi-juridictionnelles (nationales, régionales, internationales)
+- Besoins d'accès et de transparence des parties prenantes
+- Partenariats internationaux avec l'Europe et d'autres régions
 
-**Legal Notice**: This platform provides educational resources and tools to assist with privacy compliance but does not constitute legal advice. Educational institutions are responsible for ensuring their own compliance with applicable laws and regulations.
+**Avis Légal** : Cette plateforme fournit des ressources éducatives et des outils pour assister la conformité en matière de protection des données mais ne constitue pas un conseil juridique. Les institutions éducatives sont responsables d'assurer leur propre conformité avec les lois et réglementations applicables.
 
-For more information, visit: www.EDUSOLUCEbyERMITS.com
+Pour plus d'informations, visitez : www.EDUSOLUCEbyERMITS.com

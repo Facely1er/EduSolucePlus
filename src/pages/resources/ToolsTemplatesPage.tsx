@@ -10,7 +10,6 @@ import {
   Puzzle,
   CheckCircle,
   Clock,
-  Calendar,
   Shield
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';

@@ -14,10 +14,10 @@ function RoleHubDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const roleLinks = [
-    { icon: Shield, label: 'Administrator', href: '/role/administrator' },
-    { icon: Users, label: 'Teacher', href: '/role/teacher' },
-    { icon: Laptop, label: 'IT Staff', href: '/role/it-staff' },
-    { icon: Book, label: 'Student', href: '/role/student' }
+    { icon: Shield, label: 'Direction Générale', href: '/role/administrator' },
+    { icon: Users, label: 'Corps Enseignant', href: '/role/teacher' },
+    { icon: Laptop, label: 'Personnel IT / DSI', href: '/role/it-staff' },
+    { icon: Book, label: 'Étudiants', href: '/role/student' }
   ];
 
   return (
@@ -36,7 +36,7 @@ function RoleHubDropdown() {
       >
         <span className="flex items-center">
           <LayoutDashboard className="h-3.5 w-3.5 mr-1" />
-          Role Hubs
+          Rôles & Tableaux de Bord
         </span>
         <ChevronDown className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -50,7 +50,7 @@ function RoleHubDropdown() {
               onClick={() => setIsOpen(false)}
             >
               <LayoutDashboard className="h-4 w-4 mr-3" />
-              Dashboard Selector
+              Sélecteur de Tableau de Bord
             </Link>
             <div className="border-t border-border my-1"></div>
             {roleLinks.map((role) => (
@@ -76,9 +76,9 @@ function ResourcesDropdown() {
 
   const resourceTypes = [
    /* { label: 'All Resources', href: '/resources', icon: BookOpen },*/
-    { label: 'Privacy Regulations', href: '/resources/privacy-regulations', icon: Shield },
-    { label: 'Professional Guides', href: '/resources/professional-guides', icon: GraduationCap },
-    { label: 'Tools & Templates', href: '/resources/tools-templates', icon: Puzzle }
+    { label: 'Réglementations', href: '/resources/privacy-regulations', icon: Shield },
+    { label: 'Guides Professionnels', href: '/resources/professional-guides', icon: GraduationCap },
+    { label: 'Outils & Modèles', href: '/resources/tools-templates', icon: Puzzle }
   ];
 
   return (
@@ -97,7 +97,7 @@ function ResourcesDropdown() {
       >
         <span className="flex items-center">
           <BookOpen className="h-3.5 w-3.5 mr-1" />
-          Resources
+          Ressources
         </span>
         <ChevronDown className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -127,15 +127,15 @@ function PrivacyPortalDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const portalLinks = [
-    { icon: LayoutDashboard, label: 'Privacy Dashboard', href: '/privacy/dashboard' },
-    { icon: FileText, label: 'Data Rights Portal', href: '/privacy/data-rights' },
-    { icon: CheckCircle, label: 'Compliance Obligations', href: '/privacy/obligations' },
-    { icon: AlertTriangle, label: 'Privacy Incidents', href: '/privacy/incidents' },
-    { icon: Building, label: 'Vendor Assessments', href: '/privacy/vendors' },
-    { icon: Users, label: 'Consent Management', href: '/privacy/consent' },
-    { icon: Users, label: 'Stakeholder Management', href: '/privacy/stakeholders' },
-    { icon: Zap, label: 'Automation', href: '/privacy/automation' },
-    { icon: BarChart3, label: 'Analytics', href: '/privacy/analytics' }
+    { icon: LayoutDashboard, label: 'Tableau de Bord', href: '/privacy/dashboard' },
+    { icon: FileText, label: 'Droits des Personnes', href: '/privacy/data-rights' },
+    { icon: CheckCircle, label: 'Obligations de Conformité', href: '/privacy/obligations' },
+    { icon: AlertTriangle, label: 'Incidents de Sécurité', href: '/privacy/incidents' },
+    { icon: Building, label: 'Évaluation Fournisseurs', href: '/privacy/vendors' },
+    { icon: Users, label: 'Gestion du Consentement', href: '/privacy/consent' },
+    { icon: Users, label: 'Gestion des Parties Prenantes', href: '/privacy/stakeholders' },
+    { icon: Zap, label: 'Automatisation', href: '/privacy/automation' },
+    { icon: BarChart3, label: 'Analyses & Rapports', href: '/privacy/analytics' }
   ];
 
   return (
@@ -153,7 +153,7 @@ function PrivacyPortalDropdown() {
       >
         <span className="flex items-center">
           <Database className="h-3.5 w-3.5 mr-1" />
-          Privacy Portal
+          Portail Vie Privée
         </span>
         <ChevronDown className={`relative top-[1px] ml-1 h-3 w-3 transition duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -216,10 +216,10 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/95">
       <div className="container flex h-16 items-center justify-between px-2">
         <Link className="flex items-center gap-1.5" to="/">
-          <img src="/logos/edusoluce-logo.png" alt="EduSoluce Logo" className="h-8 w-8" />
+          <img src="/logos/edusoluce-logo.png" alt="Logo EduSoluce" className="h-8 w-8" />
           <div className="flex flex-col">
-            <span className="font-bold text-xs md:text-sm lg:text-base leading-none">EduSoluce™</span>
-            <span className="text-[10px] text-muted-foreground">by ERMITS</span>
+            <span className="font-bold text-xs md:text-sm lg:text-base leading-none">EduSoluce™ Afrique</span>
+            <span className="text-[10px] text-muted-foreground">par ERMITS</span>
           </div>
         </Link>
 
@@ -229,13 +229,13 @@ export function Header() {
               <li>
                 <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/">
                   <Home className="h-3.5 w-3.5 mr-1" />
-                  Home
+                  Accueil
                 </Link>
               </li>
               <li>
-                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/how-it-works" title="Learn how EduSoluce™ works">
+                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/how-it-works" title="Découvrez comment fonctionne EduSoluce™">
                   <HelpCircle className="h-3.5 w-3.5 mr-1" />
-                  How it Works
+                  Comment ça marche
                 </Link>
               </li>
               <li>
@@ -248,13 +248,13 @@ export function Header() {
                 <PrivacyPortalDropdown />
               </li>
               <li>
-                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/integration" title="Explore ERMITS ecosystem integration">
+                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/integration" title="Explorez l'écosystème ERMITS">
                   <Puzzle className="h-3.5 w-3.5 mr-1" />
-                  Integration
+                  Intégration
                 </Link>
               </li>
               <li>
-                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/contact" title="Contact our support team">
+                <Link className="group h-9 w-max justify-center rounded-md bg-background px-1.5 py-2 text-xs font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 flex items-center" to="/contact" title="Contactez notre équipe de support">
                   <HelpCircle className="h-3.5 w-3.5 mr-1" />
                   Support
                 </Link>
@@ -322,7 +322,7 @@ export function Header() {
                       onClick={() => setUserMenuOpen(false)}
                     >
                       <UserCircle className="mr-2 h-4 w-4" />
-                      My Profile
+                      Mon Profil
                     </Link>
                     <Link 
                       to="/settings" 
@@ -330,7 +330,7 @@ export function Header() {
                       onClick={() => setUserMenuOpen(false)}
                     >
                       <Settings className="mr-2 h-4 w-4" />
-                      Settings
+                      Paramètres
                     </Link>
                   </div>
                   <div className="p-1 border-t border-gray-200 dark:border-gray-700">
@@ -339,7 +339,7 @@ export function Header() {
                       onClick={handleLogout}
                     >
                       <LogOut className="mr-2 h-4 w-4" />
-                      Sign Out
+                      Déconnexion
                     </button>
                   </div>
                 </div>
@@ -350,12 +350,12 @@ export function Header() {
               <Link to="/login">
                 <Button variant="outline">
                   <User className="mr-1 h-3.5 w-3.5" />
-                  Login
+                  Connexion
                 </Button>
               </Link>
               <Link to="/register">
                 <Button>
-                  Register
+                  S'inscrire
                 </Button>
               </Link>
             </div>
@@ -388,7 +388,7 @@ export function Header() {
               <div className="flex gap-2 mb-2">
                 <Button variant="outline" size="sm" className="flex-1">
                   <Search className="mr-2 h-4 w-4" />
-                  Search
+                  Rechercher
                 </Button>
                 <div className="flex">
                   <NotificationDropdown mobile />

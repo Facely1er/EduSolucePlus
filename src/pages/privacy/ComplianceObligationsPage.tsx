@@ -7,7 +7,6 @@ import {
   Clock,
   FileText,
   Users,
-  Settings,
   Plus,
   Download,
   ExternalLink,

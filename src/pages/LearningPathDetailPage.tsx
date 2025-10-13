@@ -54,10 +54,11 @@ export function LearningPathDetailPage() {
       );
 
       // Calculate path progress (percent of completed modules)
-      const completedModules = pathModules.filter(m => m?.status === 'completed').length;
-      const progressPercentage = pathModules.length > 0 
-        ? Math.round((completedModules / pathModules.length) * 100) 
-        : 0;
+      const _completedModules = pathModules.filter(m => m?.status === 'completed').length;
+      // Progress percentage can be calculated if needed for future display
+      // const progressPercentage = pathModules.length > 0 
+      //   ? Math.round((completedModules / pathModules.length) * 100) 
+      //   : 0;
 
       setLearningPath(path);
       setModules(pathModules);

@@ -14,9 +14,11 @@ export function HomePage() {
       {/* Our Approach Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Solution Overview</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Aperçu de la Solution</h2>
           <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
-            EduSoluce™ is a comprehensive privacy education platform designed specifically for educational institutions, combining assessment, training, and compliance tools into one intuitive solution.
+            EduSoluce™ est une plateforme complète de conformité en matière de protection des données, 
+            conçue spécifiquement pour les institutions éducatives africaines, combinant évaluation, 
+            formation et outils de conformité dans une solution intuitive.
           </p>
           
           <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -26,8 +28,8 @@ export function HomePage() {
                   <FileCheck className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Self-Service Privacy Portal</h3>
-                  <p className="text-muted-foreground text-sm">Comprehensive privacy management including data rights, compliance obligations, and stakeholder access.</p>
+                  <h3 className="font-semibold mb-1">Portail Libre-Service pour la Vie Privée</h3>
+                  <p className="text-muted-foreground text-sm">Gestion complète de la protection des données incluant les droits des personnes, obligations de conformité et accès des parties prenantes.</p>
                 </div>
               </div>
               
@@ -36,8 +38,8 @@ export function HomePage() {
                   <Users className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Role-Based Approach</h3>
-                  <p className="text-muted-foreground text-sm">Customized experiences for administrators, teachers, IT staff, and students with relevant content for each.</p>
+                  <h3 className="font-semibold mb-1">Approche Par Rôle</h3>
+                  <p className="text-muted-foreground text-sm">Expériences personnalisées pour les administrateurs, enseignants, personnel IT, DPO et étudiants avec contenu pertinent pour chacun.</p>
                 </div>
               </div>
               
@@ -46,15 +48,15 @@ export function HomePage() {
                   <RefreshCw className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">North American Compliance</h3>
-                  <p className="text-muted-foreground text-sm">Support for FERPA, COPPA, CCPA, BIPA, PIPEDA, and other regional privacy regulations.</p>
+                  <h3 className="font-semibold mb-1">Conformité Africaine & Européenne</h3>
+                  <p className="text-muted-foreground text-sm">Support pour le RGPD, les lois ivoiriennes, la Convention de Malabo, CEDEAO et autres réglementations régionales.</p>
                 </div>
               </div>
               
               <div className="pt-4">
                 <Link to="/how-it-works">
                   <Button variant="outline">
-                    Discover how EduSoluce™ works
+                    Découvrez comment fonctionne EduSoluce™
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -108,33 +110,33 @@ export function HomePage() {
       {/* Benefits for Every Stakeholder */}
       <section className="py-16 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Benefits for Every Stakeholder</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Bénéfices pour Chaque Partie Prenante</h2>
           <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
                     <Users className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h3 className="font-semibold text-xl">Administrators</h3>
+                  <h3 className="font-semibold text-xl">Direction Générale</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Ensure institutional compliance with ease</span>
+                    <span className="text-muted-foreground">Assurer la conformité institutionnelle facilement</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Gain insights into overall privacy posture</span>
+                    <span className="text-muted-foreground">Obtenir une vue d'ensemble de la posture de protection des données</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Streamline policy management and reporting</span>
+                    <span className="text-muted-foreground">Simplifier la gestion des politiques et des rapports</span>
                   </li>
                 </ul>
                 <div className="mt-4">
-                  <Link to="/role/administrator" title="Access the Administrator Hub">
+                  <Link to="/role/administrator" title="Accéder au Hub Direction Générale">
                     <Button variant="outline" size="sm">
-                      Explore Administrator Hub
+                      Explorer le Hub Direction Générale
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -145,26 +147,26 @@ export function HomePage() {
                   <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
                     <GraduationCap className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h3 className="font-semibold text-xl">Teachers</h3>
+                  <h3 className="font-semibold text-xl">Corps Enseignant</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Understand classroom privacy best practices</span>
+                    <span className="text-muted-foreground">Comprendre les meilleures pratiques de protection des données en classe</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Evaluate EdTech tools for compliance</span>
+                    <span className="text-muted-foreground">Évaluer les outils éducatifs numériques pour la conformité</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Protect student data in daily activities</span>
+                    <span className="text-muted-foreground">Protéger les données des étudiants dans les activités quotidiennes</span>
                   </li>
                 </ul>
                 <div className="mt-4">
-                  <Link to="/role/teacher" title="Access the Teacher Hub">
+                  <Link to="/role/teacher" title="Accéder au Hub Corps Enseignant">
                     <Button variant="outline" size="sm">
-                      Explore Teacher Hub
+                      Explorer le Hub Corps Enseignant
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -175,26 +177,26 @@ export function HomePage() {
                   <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
                     <Laptop className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h3 className="font-semibold text-xl">IT Staff</h3>
+                  <h3 className="font-semibold text-xl">Personnel IT / DSI</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Enhance system security and data protection</span>
+                    <span className="text-muted-foreground">Renforcer la sécurité des systèmes et la protection des données</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Manage vendor compliance and risk</span>
+                    <span className="text-muted-foreground">Gérer la conformité et les risques des fournisseurs</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Respond effectively to security incidents</span>
+                    <span className="text-muted-foreground">Répondre efficacement aux incidents de sécurité</span>
                   </li>
                 </ul>
                 <div className="mt-4">
-                  <Link to="/role/it-staff" title="Access the IT Staff Hub">
+                  <Link to="/role/it-staff" title="Accéder au Hub Personnel IT">
                     <Button variant="outline" size="sm">
-                      Explore IT Staff Hub
+                      Explorer le Hub Personnel IT
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -205,26 +207,26 @@ export function HomePage() {
                   <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
                     <Smartphone className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   </div>
-                  <h3 className="font-semibold text-xl">Students</h3>
+                  <h3 className="font-semibold text-xl">Étudiants</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Learn about digital privacy rights and safety</span>
+                    <span className="text-muted-foreground">Apprendre sur leurs droits numériques et la sécurité en ligne</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Develop responsible online habits</span>
+                    <span className="text-muted-foreground">Développer des habitudes responsables en ligne</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">Understand their digital footprint</span>
+                    <span className="text-muted-foreground">Comprendre leur empreinte numérique</span>
                   </li>
                 </ul>
                 <div className="mt-4">
-                  <Link to="/role/student" title="Access the Student Hub">
+                  <Link to="/role/student" title="Accéder au Hub Étudiants">
                     <Button variant="outline" size="sm">
-                      Explore Student Hub
+                      Explorer le Hub Étudiants
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>

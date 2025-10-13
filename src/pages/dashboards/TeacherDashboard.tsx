@@ -27,7 +27,6 @@ export function TeacherDashboard() {
   const completedTraining = 4;
   const totalTraining = 6;
   const studentsInClass = 28;
-  const upcomingDeadlines = 2;
 
   // Get compliance events relevant to teachers
   const teacherRoles = [

@@ -190,7 +190,7 @@ class TrainingService {
         throw new Error('Training module not found');
       }
 
-      let completedContent = [...progress.completed_content];
+      const completedContent = [...progress.completed_content];
       if (completed && !completedContent.includes(contentId)) {
         completedContent.push(contentId);
       }

@@ -31,7 +31,7 @@ import {
   learningPaths,
   type TrainingModule,
 } from '../data/trainingModulesData';
-import { useNotifications, createNotification } from '../contexts/NotificationContext';
+import { useNotifications } from '../contexts/NotificationContext';
 import { useUser } from '../hooks/useSupabase';
 import { useTrainingProgress } from '../hooks/useSupabase';
 
@@ -40,12 +40,11 @@ export function TrainingModuleDetailPage() {
   const { moduleId } = useParams<{ moduleId: string }>();
   const [module, setModule] = useState<TrainingModule | null>(null);
   const [loading, setLoading] = useState(true);
-  const [enrolling, setEnrolling] = useState(false);
+  const [enrolling] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
-  const { user, loading: userLoading } = useUser();
-  const { addNotification } = useNotifications();
-  const { startModule, updateProgress, getModuleProgress } = useTrainingProgress(user?.id);
+  const { user } = useUser();
+  const { getModuleProgress } = useTrainingProgress(user?.id);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -80,58 +79,6 @@ export function TrainingModuleDetailPage() {
       loadModule();
     }
   }, [moduleId, user?.id, getModuleProgress]);
-
-  const handleEnroll = async () => {
-    setEnrolling(true);
-    
-    try {
-      // If user is logged in, save progress to database
-      if (user?.id && module) {
-        const { error } = await startModule(module.id, module.title);
-        if (error) {
-          console.error('Error starting module:', error);
-          addNotification({
-            type: 'error',
-            title: 'Error',
-            message: 'Failed to start module. Please try again.',
-            timestamp: Date.now(),
-            read: false,
-            category: 'training'
-          });
-        } else {
-          // Update local state
-          setModule(prev => prev ? { ...prev, status: 'in-progress', progress: 0 } : null);
-          addNotification({
-            type: 'success',
-            title: 'Module Started',
-            message: `You've started ${module.title}`,
-            timestamp: Date.now(),
-            read: false,
-            category: 'training'
-          });
-        }
-      } else {
-        // For anonymous users, just update UI state without saving
-        if (module) {
-          setModule(prev => prev ? { ...prev, status: 'in-progress', progress: 0 } : null);
-          setShowLoginPrompt(true);
-        }
-      }
-    } catch (err) {
-      console.error('Error in handleEnroll:', err);
-    }
-    
-    setEnrolling(false);
-  };
-
-  const handleContinue = () => {
-    // Navigate to first incomplete lesson
-    const nextLesson = module?.syllabus.find(item => !item.completed);
-    if (nextLesson) {
-      // In real implementation, navigate to lesson detail page
-      console.log('Navigate to lesson:', nextLesson.id);
-    }
-  };
 
   const handleLoginPromptClose = () => {
     setShowLoginPrompt(false);

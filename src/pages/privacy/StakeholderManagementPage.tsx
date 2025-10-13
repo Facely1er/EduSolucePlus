@@ -2,21 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users,
-  Shield,
-  Eye,
   Settings,
-  Plus,
-  Search,
   Filter,
   BarChart3,
   Clock,
-  Mail,
-  Phone,
   CheckCircle,
   AlertTriangle,
   UserCheck,
   UserX,
-  Activity,
   Download,
   GraduationCap
 } from 'lucide-react';
@@ -27,7 +20,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/Ta
 import { StakeholderAccessControl } from '../../components/privacy/StakeholderAccessControl';
 
 export function StakeholderManagementPage() {
-  const organizationId = 'a1b2c3d4-e5f6-7890-1234-567890abcdef';
   const [activeTab, setActiveTab] = useState('overview');
 
   // Mock stakeholder data

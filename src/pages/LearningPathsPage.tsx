@@ -41,7 +41,7 @@ export function LearningPathsPage() {
     role: '',
   });
   const [showFilters, setShowFilters] = useState(false);
-  const [loading, _setLoading] = useState(false);
+  const [loading] = useState(false);
 
   // Filter learning paths based on current filters
   const filteredPaths = learningPaths.filter(path => {
@@ -55,13 +55,13 @@ export function LearningPathsPage() {
     return true;
   });
 
-  // Get module titles for each path
-  const _getModuleTitles = (moduleIds: string[]) => {
-    return moduleIds.map(id => {
-      const module = trainingModules.find(m => m.id === id);
-      return module ? module.title : 'Unknown module';
-    });
-  };
+  // Get module titles for each path (available for future use)
+  // const getModuleTitles = (moduleIds: string[]) => {
+  //   return moduleIds.map(id => {
+  //     const module = trainingModules.find(m => m.id === id);
+  //     return module ? module.title : 'Unknown module';
+  //   });
+  // };
 
   const updateFilter = (key: keyof FilterState, value: string) => {
     setFilters(prev => ({ ...prev, [key]: value }));

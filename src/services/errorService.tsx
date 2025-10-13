@@ -239,7 +239,7 @@ export function withErrorBoundary<P extends object>(
     return (
       <ReactErrorBoundary
         FallbackComponent={errorBoundaryProps?.fallback || ErrorFallback}
-        onError={(error, errorInfo) => {
+        onError={(error) => {
           errorService.reportError(error, {
             component: Component.displayName || Component.name,
             severity: 'high'
