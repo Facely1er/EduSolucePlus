@@ -218,7 +218,7 @@ export function Header() {
         <Link className="flex items-center gap-1.5" to="/">
           <img src="/logos/edusoluce-logo.png" alt="Logo EduSoluce" className="h-8 w-8" />
           <div className="flex flex-col">
-            <span className="font-bold text-xs md:text-sm lg:text-base leading-none">EduSoluce™ Afrique</span>
+            <span className="font-bold text-xs md:text-sm lg:text-base leading-none">EduSoluce</span>
             <span className="text-[10px] text-muted-foreground">par ERMITS</span>
           </div>
         </Link>
