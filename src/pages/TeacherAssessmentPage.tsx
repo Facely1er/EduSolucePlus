@@ -50,10 +50,10 @@ export function TeacherAssessmentPage() {
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          Teacher Assessments
+          Évaluations Corps Enseignant
         </h1>
         <p className="text-muted-foreground">
-          Complete these assessments to evaluate and improve your privacy compliance knowledge ({filteredAssessments.length} assessments)
+          Complétez ces évaluations pour évaluer et améliorer vos connaissances en protection des données ({filteredAssessments.length} évaluations)
         </p>
       </div>
       

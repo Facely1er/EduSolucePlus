@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   AlertCircle,
@@ -30,11 +29,11 @@ export function AdministratorDashboard() {
 
   // Get compliance events relevant to administrators
   const adminRoles = [
-    'Superintendent', 'Principal', 'Registrar', 'Student Services', 'Special Education Director',
-    'Data Manager', 'Curriculum Director', 'Assessment Coordinator', 'Title IX Coordinator',
-    'Human Resources', 'Compliance Officer', 'Procurement Officer', 'Data Privacy Officer',
-    'Privacy Officer', 'Section 504 Coordinator', 'Facilities Manager', 'ADA Coordinator',
-    'Records Manager', 'McKinney-Vento Coordinator', 'Administrators'
+    'Directeur Général', 'Directeur', 'Secrétaire Général', 'Services Étudiants', 'Directeur Éducation Spéciale',
+    'Gestionnaire de Données', 'Directeur Pédagogique', 'Coordinateur Évaluations', 'Coordinateur Égalité',
+    'Ressources Humaines', 'Responsable Conformité', 'Responsable Achats', 'Délégué Protection Données',
+    'Responsable Confidentialité', 'Coordinateur Accessibilité', 'Gestionnaire Installations', 'Coordinateur ADA',
+    'Gestionnaire Archives', 'Coordinateur Logement', 'Direction Générale'
   ];
 
   const upcomingDeadlines = getUpcomingDeadlines(120).filter(event => 
@@ -48,46 +47,46 @@ export function AdministratorDashboard() {
 
   const priorityActions = [
     {
-      title: 'Implement COPPA Vendor Assessment',
-      description: 'Develop formal vendor evaluation process for COPPA compliance',
+      title: 'Implémenter l\'Évaluation des Fournisseurs RGPD',
+      description: 'Développer un processus formel d\'évaluation des fournisseurs pour la conformité RGPD',
       priority: 'high' as const,
-      estimatedTime: '2-3 weeks',
+      estimatedTime: '2-3 semaines',
       dueDate: '2025-03-31',
-      relatedEvent: 'coppa-vendor-audit-q1-2025'
+      relatedEvent: 'rgpd-vendor-audit-q1-2025'
     },
     {
-      title: 'Update Emergency Disclosure Procedures',
-      description: 'Create comprehensive emergency protocols with oversight mechanisms',
+      title: 'Mettre à Jour les Procédures de Divulgation d\'Urgence',
+      description: 'Créer des protocoles d\'urgence complets avec mécanismes de supervision',
       priority: 'medium' as const,
-      estimatedTime: '1-2 weeks',
+      estimatedTime: '1-2 semaines',
       dueDate: '2025-02-15',
       relatedEvent: null
     },
     {
-      title: 'Prepare FERPA Annual Notice',
-      description: 'Update and prepare FERPA annual notice for SY 2025-26 distribution',
+      title: 'Préparer la Notification Annuelle RGPD',
+      description: 'Mettre à jour et préparer la notification annuelle RGPD pour l\'année 2025-26',
       priority: 'high' as const,
-      estimatedTime: '3-4 weeks',
+      estimatedTime: '3-4 semaines',
       dueDate: '2025-08-15',
-      relatedEvent: 'ferpa-annual-notice-2025'
+      relatedEvent: 'rgpd-annual-notice-2025'
     }
   ];
 
   const complianceBreakdown = [
-    { regulation: 'FERPA', score: 75, areas: 10, color: 'bg-blue-500' },
-    { regulation: 'COPPA', score: 62, areas: 8, color: 'bg-amber-500' },
-    { regulation: 'GDPR', score: 45, areas: 12, color: 'bg-red-500' },
-    { regulation: 'General', score: 70, areas: 15, color: 'bg-green-500' }
+    { regulation: 'RGPD', score: 75, areas: 10, color: 'bg-blue-500' },
+    { regulation: 'Loi Ivoirienne', score: 62, areas: 8, color: 'bg-amber-500' },
+    { regulation: 'ARTCI', score: 45, areas: 12, color: 'bg-red-500' },
+    { regulation: 'Général', score: 70, areas: 15, color: 'bg-green-500' }
   ];
 
   const staffOverview = [
-    { role: 'Teachers', total: 45, completed: 38, percentage: 84 },
-    { role: 'IT Staff', total: 8, completed: 6, percentage: 75 },
-    { role: 'Administrators', total: 12, completed: 10, percentage: 83 }
+    { role: 'Enseignants', total: 45, completed: 38, percentage: 84 },
+    { role: 'Personnel IT', total: 8, completed: 6, percentage: 75 },
+    { role: 'Direction Générale', total: 12, completed: 10, percentage: 83 }
   ];
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('fr-FR', { 
       month: 'short', 
       day: 'numeric', 
       year: 'numeric' 
@@ -109,14 +108,14 @@ export function AdministratorDashboard() {
 
   const getRegulationBadgeVariant = (regulation: string) => {
     switch (regulation.toLowerCase()) {
-      case 'ferpa':
-        return 'ferpa';
-      case 'coppa':
-        return 'coppa';
-      case 'gdpr':
+      case 'rgpd':
         return 'gdpr';
-      case 'ppra':
-        return 'ppra';
+      case 'loi ivoirienne':
+        return 'general';
+      case 'artci':
+        return 'general';
+      case 'malabo-convention':
+        return 'general';
       default:
         return 'general';
     }
@@ -128,9 +127,9 @@ export function AdministratorDashboard() {
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Administrator Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-2">Tableau de Bord Direction Générale</h1>
             <p className="text-muted-foreground">
-              Institutional privacy compliance overview and management
+              Aperçu et gestion de la conformité institutionnelle en matière de protection des données
             </p>
           </div>
     
@@ -148,8 +147,8 @@ export function AdministratorDashboard() {
               {overallMaturity}%
             </span>
           </div>
-          <h3 className="font-semibold mb-1">Overall Maturity</h3>
-          <p className="text-sm text-muted-foreground">Level 4 - Managed</p>
+          <h3 className="font-semibold mb-1">Maturité Globale</h3>
+          <p className="text-sm text-muted-foreground">Niveau 4 - Géré</p>
         </div>
 
         <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
@@ -161,8 +160,8 @@ export function AdministratorDashboard() {
               {staffCompliance}%
             </span>
           </div>
-          <h3 className="font-semibold mb-1">Staff Compliance</h3>
-          <p className="text-sm text-muted-foreground">Training completion rate</p>
+          <h3 className="font-semibold mb-1">Conformité du Personnel</h3>
+          <p className="text-sm text-muted-foreground">Taux de completion de formation</p>
         </div>
 
         <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
@@ -174,8 +173,8 @@ export function AdministratorDashboard() {
               {criticalEvents.length}
             </span>
           </div>
-          <h3 className="font-semibold mb-1">Critical Deadlines</h3>
-          <p className="text-sm text-muted-foreground">Next 60 days</p>
+          <h3 className="font-semibold mb-1">Échéances Critiques</h3>
+          <p className="text-sm text-muted-foreground">60 prochains jours</p>
         </div>
 
         <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
@@ -187,8 +186,8 @@ export function AdministratorDashboard() {
               +12%
             </span>
           </div>
-          <h3 className="font-semibold mb-1">Improvement</h3>
-          <p className="text-sm text-muted-foreground">Since last quarter</p>
+          <h3 className="font-semibold mb-1">Amélioration</h3>
+          <p className="text-sm text-muted-foreground">Depuis le dernier trimestre</p>
         </div>
       </div>
 
@@ -200,12 +199,12 @@ export function AdministratorDashboard() {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold flex items-center">
                 <Calendar className="h-5 w-5 mr-2 text-red-500" />
-                Upcoming Compliance Deadlines
+                Échéances de Conformité à Venir
               </h2>
               <Link to="/calendar">
                 <Button variant="outline" size="sm">
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  View Calendar
+                  Voir le Calendrier
                 </Button>
               </Link>
             </div>
@@ -253,7 +252,7 @@ export function AdministratorDashboard() {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold flex items-center">
                 <Target className="h-5 w-5 mr-2 text-blue-500" />
-                Compliance Action Plan & Roadmap
+                Plan d'Action & Feuille de Route de Conformité
               </h2>
             </div>
             
@@ -267,11 +266,11 @@ export function AdministratorDashboard() {
                       <div className="flex items-center gap-3 text-xs">
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
-                          <span>Est. Time: {action.estimatedTime}</span>
+                          <span>Temps Est.: {action.estimatedTime}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
-                          <span>Due: {action.dueDate}</span>
+                          <span>Échéance: {action.dueDate}</span>
                         </div>
                       </div>
                     </div>
@@ -282,7 +281,7 @@ export function AdministratorDashboard() {
                   {action.relatedEvent && (
                     <div className="text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 p-2 rounded">
                       <AlertCircle className="h-3 w-3 inline mr-1" />
-                      Related to compliance deadline: {action.relatedEvent}
+                      Lié à l'échéance de conformité: {action.relatedEvent}
                     </div>
                   )}
                 </div>
@@ -293,7 +292,7 @@ export function AdministratorDashboard() {
           {/* Compliance Breakdown */}
           <div className="bg-gray-50 dark:bg-gray-950 rounded-lg border p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold">Regulatory Compliance</h2>
+              <h2 className="text-xl font-semibold">Conformité Réglementaire</h2>
               <BarChart3 className="h-5 w-5 text-muted-foreground" />
             </div>
             
@@ -303,7 +302,7 @@ export function AdministratorDashboard() {
                   <div className="flex items-center justify-between">
                     <span className="font-medium">{item.regulation}</span>
                     <span className="text-sm text-muted-foreground">
-                      {item.score}% ({item.areas} areas)
+                      {item.score}% ({item.areas} domaines)
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
@@ -320,7 +319,7 @@ export function AdministratorDashboard() {
           {/* Staff Overview */}
           <div className="bg-white dark:bg-gray-900 rounded-lg border p-6">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold">Staff Training Overview</h2>
+              <h2 className="text-xl font-semibold">Aperçu de la Formation du Personnel</h2>
               <Users className="h-5 w-5 text-muted-foreground" />
             </div>
             
@@ -330,7 +329,7 @@ export function AdministratorDashboard() {
                   <div>
                     <h3 className="font-medium">{staff.role}</h3>
                     <p className="text-sm text-muted-foreground">
-                      {staff.completed} of {staff.total} completed training
+                      {staff.completed} sur {staff.total} ont terminé la formation
                     </p>
                   </div>
                   <div className="text-right">

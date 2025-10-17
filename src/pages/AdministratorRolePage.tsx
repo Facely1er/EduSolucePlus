@@ -50,7 +50,7 @@ export function AdministratorRolePage() {
         <Breadcrumb />
         <LoadingState 
           loading={true} 
-          loadingMessage="Loading user profile..." 
+          loadingMessage="Chargement du profil utilisateur..." 
         />
       </div>
     );
@@ -62,19 +62,19 @@ export function AdministratorRolePage() {
     
     return (
       <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-1">Demo Mode</h3>
+        <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-1">Mode Démonstration</h3>
         <p className="text-blue-700 dark:text-blue-300 mb-3">
-          You're viewing the Administrator Hub in demo mode. Some features may be limited without authentication.
+          Vous consultez le Hub Direction Générale en mode démonstration. Certaines fonctionnalités peuvent être limitées sans authentification.
         </p>
         <div className="flex gap-2">
           <Link to="/login">
             <Button size="sm" variant="outline">
-              Sign In
+              Se Connecter
             </Button>
           </Link>
           <Link to="/register">
             <Button size="sm">
-              Create Account
+              Créer un Compte
             </Button>
           </Link>
         </div>
@@ -89,14 +89,14 @@ export function AdministratorRolePage() {
     
     return (
       <div className="mb-4 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
-        <h3 className="font-medium text-amber-800 dark:text-amber-200 mb-1">Viewing Administrator Content</h3>
+        <h3 className="font-medium text-amber-800 dark:text-amber-200 mb-1">Consultation du Contenu Direction Générale</h3>
         <p className="text-amber-700 dark:text-amber-300 mb-3">
-          You're viewing content for administrators, but your account is registered as a {profile?.role.replace('-', ' ')}. 
-          While you can explore this content, some features may be limited.
+          Vous consultez le contenu pour la direction générale, mais votre compte est enregistré en tant que {profile?.role.replace('-', ' ')}. 
+          Bien que vous puissiez explorer ce contenu, certaines fonctionnalités peuvent être limitées.
         </p>
         <Link to={`/role/${profile?.role}`}>
           <Button size="sm" variant="outline">
-            Go to {profile?.role.replace('-', ' ')} hub
+            Aller au hub {profile?.role.replace('-', ' ')}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>
@@ -113,15 +113,15 @@ export function AdministratorRolePage() {
       <div className="mb-8">
         <div className="flex justify-between items-start flex-wrap gap-4">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Administrator Hub</h1>
+            <h1 className="text-3xl font-bold mb-2">Hub Direction Générale</h1>
             <p className="text-muted-foreground">
-              Centralized access to administrator dashboards, assessments, and resources
+              Accès centralisé aux tableaux de bord, évaluations et ressources pour la direction générale
             </p>
           </div>
           <Link to="/dashboard">
             <Button variant="outline" size="sm">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Role Selection
+              Retour à la Sélection de Rôle
             </Button>
           </Link>
         </div>
@@ -139,22 +139,22 @@ export function AdministratorRolePage() {
           <TabsList className="grid w-full max-w-md grid-cols-3">
             <TabsTrigger value="dashboard" className="flex items-center gap-2">
               <LayoutDashboard className="h-4 w-4" />
-              Dashboard
+              Tableau de Bord
             </TabsTrigger>
             <TabsTrigger value="assessments" className="flex items-center gap-2">
               <FileCheck className="h-4 w-4" />
-              Assessments
+              Évaluations
             </TabsTrigger>
             <TabsTrigger value="training" className="flex items-center gap-2">
               <GraduationCap className="h-4 w-4" />
-              Action Plan & Training
+              Plan d'Action & Formation
             </TabsTrigger>
           </TabsList>
         </div>
         
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
           <p className="text-sm text-blue-800 dark:text-blue-300">
-            <strong>Administrator Hub:</strong> Use the tabs above to navigate between your compliance dashboard, assessments, and training. The dashboard provides a comprehensive view of your institution's privacy compliance status, assessments help you evaluate specific areas, and the action plan guides your ongoing privacy improvements.
+            <strong>Hub Direction Générale :</strong> Utilisez les onglets ci-dessus pour naviguer entre votre tableau de bord de conformité, les évaluations et la formation. Le tableau de bord fournit une vue complète du statut de conformité en matière de protection des données de votre institution, les évaluations vous aident à évaluer des domaines spécifiques, et le plan d'action guide vos améliorations continues en matière de protection des données.
           </p>
         </div>
         

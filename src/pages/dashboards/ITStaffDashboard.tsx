@@ -148,9 +148,9 @@ export function ITStaffDashboard() {
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">IT Staff Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-2">Tableau de Bord Personnel IT / DSI</h1>
             <p className="text-muted-foreground">
-              System security, compliance monitoring, and infrastructure management
+              Sécurité système, surveillance de conformité et gestion d'infrastructure
             </p>
           </div>
           <div className="flex items-center gap-2">

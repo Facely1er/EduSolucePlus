@@ -1,7 +1,9 @@
-# EduSoluce™ Afrique - Portail Libre-Service de Protection des Données pour les Institutions Éducatives
+# EduSoluce™ Afrique - Plateforme Éducative de Protection des Données pour les Institutions Éducatives
+
+> ⚠️ **AVERTISSEMENT IMPORTANT** : EduSoluce™ Afrique est une **plateforme éducative et d'assistance uniquement**. Elle ne constitue pas un conseil juridique, ne garantit pas la conformité légale, et ne remplace pas les conseils d'un avocat qualifié ou d'un Délégué à la Protection des Données (DPO). Pour toute décision de conformité, consultez toujours un expert juridique et votre autorité de contrôle locale (ARTCI en Côte d'Ivoire, CNIL en France, etc.).
 
 ## Aperçu
-EduSoluce™ Afrique est une plateforme d'assistance à la conformité en matière de protection des données, conçue spécifiquement pour les institutions éducatives africaines et leurs parties prenantes. Elle fournit un portail libre-service pour aider à gérer les obligations de conformité, l'exécution des droits des personnes concernées et la gouvernance de la protection des données selon le RGPD, les lois nationales africaines et les réglementations internationales. Note : Cette plateforme est conçue pour assister les efforts de conformité mais ne garantit pas la conformité avec une loi ou réglementation spécifique.
+EduSoluce™ Afrique est une plateforme d'**assistance éducative** à la protection des données, conçue spécifiquement pour les institutions éducatives africaines et leurs parties prenantes. Elle fournit des ressources pédagogiques et des outils pour aider à **comprendre** les obligations de conformité, l'exécution des droits des personnes concernées et la gouvernance de la protection des données selon le RGPD, les lois nationales africaines et les réglementations internationales.
 
 ## Fonctionnalités Clés
 

@@ -14,11 +14,11 @@ export function PrivacyPolicyPage() {
           <div className="mb-8">
             <Link to="/register" className="inline-flex items-center text-primary-600 hover:text-primary-500 mb-4">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Registration
+              Retour à l'Inscription
             </Link>
-            <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
+            <h1 className="text-3xl font-bold mb-2">Politique de Confidentialité</h1>
             <p className="text-muted-foreground">
-              Effective Date: January 1, 2025 | Last Updated: January 1, 2025
+              Date d'Entrée en Vigueur : 1er Janvier 2025 | Dernière Mise à Jour : 1er Janvier 2025
             </p>
           </div>
 
@@ -29,19 +29,20 @@ export function PrivacyPolicyPage() {
                 1. Introduction
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                At EduSoluce™, we are committed to protecting your privacy and the security of your personal 
-                information. This Privacy Policy is designed to help you understand how we collect, use, disclose, 
-                and safeguard your information when you use our educational compliance platform.
+                Chez EduSoluce™ Afrique, nous nous engageons à protéger votre confidentialité et la sécurité de vos 
+                informations personnelles. Cette Politique de Confidentialité est conçue pour vous aider à comprendre 
+                comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez 
+                notre plateforme de conformité éducative.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                As an educational technology provider, we understand the importance of privacy in the educational 
-                sector and are committed to compliance with applicable laws including FERPA, COPPA, GDPR, and other 
-                relevant privacy regulations.
+                En tant que fournisseur de technologie éducative, nous comprenons l'importance de la confidentialité 
+                dans le secteur éducatif et nous nous engageons à respecter les lois applicables, notamment le RGPD, 
+                la Loi Ivoirienne, ARTCI et autres réglementations pertinentes en matière de confidentialité.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+              <h2 className="text-2xl font-semibold mb-4">2. Informations que Nous Collectons</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <h3 className="text-lg font-medium">a. Information you provide to us:</h3>
                 <ul className="list-disc pl-6 space-y-2">

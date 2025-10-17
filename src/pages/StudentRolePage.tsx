@@ -112,7 +112,7 @@ export function StudentRolePage() {
       <div className="mb-8">
         <div className="flex justify-between items-start flex-wrap gap-4">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Student Hub</h1>
+            <h1 className="text-3xl font-bold mb-2">Hub Étudiant(e)</h1>
             <p className="text-muted-foreground">
               Centralized access to student dashboard, privacy assessments, and learning resources
             </p>
@@ -120,7 +120,7 @@ export function StudentRolePage() {
           <Link to="/dashboard">
             <Button variant="outline" size="sm">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Role Selection
+              Retour à la Sélection de Rôle
             </Button>
           </Link>
         </div>
@@ -138,15 +138,15 @@ export function StudentRolePage() {
           <TabsList className="grid w-full max-w-md grid-cols-3">
             <TabsTrigger value="dashboard" className="flex items-center gap-2">
               <LayoutDashboard className="h-4 w-4" />
-              Dashboard
+              Tableau de Bord
             </TabsTrigger>
             <TabsTrigger value="assessments" className="flex items-center gap-2">
               <FileCheck className="h-4 w-4" />
-              Assessments
+              Évaluations
             </TabsTrigger>
             <TabsTrigger value="training" className="flex items-center gap-2">
               <GraduationCap className="h-4 w-4" />
-              Action Plan & Training
+              Plan d'Action & Formation
             </TabsTrigger>
           </TabsList>
         </div>

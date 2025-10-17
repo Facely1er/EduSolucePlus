@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   User,
   Mail,
@@ -31,7 +31,7 @@ export function ProfilePage() {
   const [success, setSuccess] = useState<string | null>(null);
 
   // Load profile data if user is logged in
-  React.useEffect(() => {
+  useEffect(() => {
     if (profile?.settings) {
       setFormData({
         full_name: profile.full_name || '',
@@ -69,9 +69,9 @@ export function ProfilePage() {
       const { error } = await updateProfile(updates);
       
       if (error) {
-        setError(error.message || 'Failed to update profile');
+        setError(error.message || 'Échec de la mise à jour du profil');
       } else {
-        setSuccess('Profile updated successfully');
+        setSuccess('Profil mis à jour avec succès');
         setIsEditing(false);
         
         // Hide success message after 3 seconds
@@ -81,7 +81,7 @@ export function ProfilePage() {
       }
     } catch (err) {
       console.error('Error updating profile:', err);
-      setError('An unexpected error occurred. Please try again.');
+      setError('Une erreur inattendue s\'est produite. Veuillez réessayer.');
     } finally {
       setIsSaving(false);
     }
@@ -104,7 +104,7 @@ export function ProfilePage() {
         <div className="flex justify-center items-center h-64">
           <div className="flex flex-col items-center">
             <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
-            <p className="text-muted-foreground">Loading profile data...</p>
+            <p className="text-muted-foreground">Chargement des données du profil...</p>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ export function ProfilePage() {
       <Breadcrumb />
       
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">My Profile</h1>
+        <h1 className="text-3xl font-bold mb-6">Mon Profil</h1>
         
         <div className="bg-white dark:bg-gray-800 rounded-lg border shadow-sm overflow-hidden">
           {/* Profile Header */}
@@ -183,7 +183,7 @@ export function ProfilePage() {
                   )}
                   {profile?.organization_id && (
                     <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">
-                      Organization Member
+                      Membre de l'Organisation
                     </span>
                   )}
                 </div>
@@ -195,7 +195,7 @@ export function ProfilePage() {
                     onClick={() => setIsEditing(true)}
                     className="bg-white/20 hover:bg-white/30"
                   >
-                    Edit Profile
+                    Modifier le profil
                   </Button>
                 </div>
               )}
@@ -228,7 +228,7 @@ export function ProfilePage() {
                 onClick={() => setIsEditing(true)}
                 className="w-full"
               >
-                Edit Profile
+                Modifier le profil
               </Button>
             </div>
           )}
@@ -238,7 +238,7 @@ export function ProfilePage() {
             <form onSubmit={handleSubmit} className="p-6">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="full_name" className="block text-sm font-medium mb-2">Full Name</label>
+                  <label htmlFor="full_name" className="block text-sm font-medium mb-2">Nom complet</label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <input
@@ -247,13 +247,13 @@ export function ProfilePage() {
                       value={formData.full_name}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-foreground"
-                      placeholder="Your full name"
+                      placeholder="Votre nom complet"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="department" className="block text-sm font-medium mb-2">Department</label>
+                  <label htmlFor="department" className="block text-sm font-medium mb-2">Département</label>
                   <div className="relative">
                     <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <input
@@ -262,13 +262,13 @@ export function ProfilePage() {
                       value={formData.department}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-foreground"
-                      placeholder="Your department"
+                      placeholder="Votre département"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="avatar_url" className="block text-sm font-medium mb-2">Avatar URL</label>
+                  <label htmlFor="avatar_url" className="block text-sm font-medium mb-2">URL de l'avatar</label>
                   <div className="relative">
                     <CameraIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <input
@@ -277,11 +277,11 @@ export function ProfilePage() {
                       value={formData.avatar_url}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-foreground"
-                      placeholder="https://your-domain.com/avatar.jpg"
+                      placeholder="https://votre-domaine.com/avatar.jpg"
                     />
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Enter a URL to an image (JPG, PNG, or GIF)
+                    Entrez une URL vers une image (JPG, PNG ou GIF)
                   </p>
                 </div>
                 
@@ -292,7 +292,7 @@ export function ProfilePage() {
                     onClick={cancelEdit}
                     disabled={isSaving}
                   >
-                    Cancel
+                    Annuler
                   </Button>
                   <Button
                     type="submit"
@@ -301,12 +301,12 @@ export function ProfilePage() {
                     {isSaving ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Saving...
+                        Enregistrement...
                       </>
                     ) : (
                       <>
                         <Save className="mr-2 h-4 w-4" />
-                        Save Changes
+                        Enregistrer
                       </>
                     )}
                   </Button>
@@ -318,8 +318,8 @@ export function ProfilePage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Full Name</h3>
-                    <p className="text-lg">{profile?.full_name || 'Not provided'}</p>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Nom complet</h3>
+                    <p className="text-lg">{profile?.full_name || 'Non fourni'}</p>
                   </div>
                   
                   <div>
@@ -331,43 +331,43 @@ export function ProfilePage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Role</h3>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Rôle</h3>
                     <div className="flex items-center gap-2">
                       <Users className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-lg">{profile?.role ? profile.role.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Not specified'}</p>
+                      <p className="text-lg">{profile?.role ? profile.role.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Non spécifié'}</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Department</h3>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Département</h3>
                     <div className="flex items-center gap-2">
                       <Briefcase className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-lg">{profile?.department || 'Not specified'}</p>
+                      <p className="text-lg">{profile?.department || 'Non spécifié'}</p>
                     </div>
                   </div>
                   
                   <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Organization</h3>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Organisation</h3>
                     <div className="flex items-center gap-2">
                       <Building className="h-4 w-4 text-muted-foreground" />
-                      <p className="text-lg">{profile?.organization_id ? 'Connected' : 'None'}</p>
+                      <p className="text-lg">{profile?.organization_id ? 'Connecté' : 'Aucune'}</p>
                     </div>
                   </div>
                   
                   <div>
-                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Member Since</h3>
+                    <h3 className="text-sm font-medium text-muted-foreground mb-1">Membre depuis</h3>
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4 text-muted-foreground" />
                       <p className="text-lg">
                         {profile?.created_at
-                          ? new Date(profile.created_at).toLocaleDateString('en-US', {
+                          ? new Date(profile.created_at).toLocaleDateString('fr-FR', {
                               year: 'numeric',
                               month: 'long',
                               day: 'numeric'
                             })
-                          : 'Unknown'
+                          : 'Inconnu'
                         }
                       </p>
                     </div>

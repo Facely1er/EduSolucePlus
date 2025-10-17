@@ -167,9 +167,9 @@ export function StudentDashboard() {
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">My Privacy Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-2">Mon Tableau de Bord Confidentialité</h1>
             <p className="text-muted-foreground">
-              Track your privacy learning journey and earn achievements
+              Suivez votre parcours d'apprentissage et obtenez des réalisations
             </p>
           </div>
           <div className="flex items-center gap-2">

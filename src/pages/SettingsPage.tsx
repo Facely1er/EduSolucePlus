@@ -146,7 +146,7 @@ export function SettingsPage() {
       <Breadcrumb />
       
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">Account Settings</h1>
+        <h1 className="text-3xl font-bold mb-6">Paramètres du compte</h1>
         
         {/* Error/Success Messages */}
         {error && (
@@ -171,12 +171,12 @@ export function SettingsPage() {
           {/* Appearance Settings */}
           <div className="bg-white dark:bg-gray-800 rounded-lg border shadow-sm">
             <div className="px-6 py-4 border-b">
-              <h2 className="text-xl font-semibold">Theme Settings</h2>
+              <h2 className="text-xl font-semibold">Paramètres de thème</h2>
             </div>
             <div className="p-6">
               <div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Choose your preferred theme for the application.
+                  Choisissez votre thème préféré pour l'application.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button
@@ -185,7 +185,7 @@ export function SettingsPage() {
                     className="flex flex-col items-center px-6 py-4 h-auto gap-2"
                   >
                     <Sun className="h-6 w-6" />
-                    <span>Light</span>
+                    <span>Clair</span>
                   </Button>
                   <Button
                     variant={theme === 'dark' ? 'default' : 'outline'}
@@ -193,7 +193,7 @@ export function SettingsPage() {
                     className="flex flex-col items-center px-6 py-4 h-auto gap-2"
                   >
                     <Moon className="h-6 w-6" />
-                    <span>Dark</span>
+                    <span>Sombre</span>
                   </Button>
                   <Button
                     variant={theme === 'system' ? 'default' : 'outline'}
@@ -201,7 +201,7 @@ export function SettingsPage() {
                     className="flex flex-col items-center px-6 py-4 h-auto gap-2"
                   >
                     <Laptop className="h-6 w-6" />
-                    <span>System</span>
+                    <span>Système</span>
                   </Button>
                 </div>
               </div>
@@ -211,11 +211,11 @@ export function SettingsPage() {
           {/* Notification Settings */}
           <div className="bg-white dark:bg-gray-800 rounded-lg border shadow-sm">
             <div className="px-6 py-4 border-b">
-              <h2 className="text-xl font-semibold">Notification Preferences</h2>
+              <h2 className="text-xl font-semibold">Préférences de notification</h2>
             </div>
             <div className="p-6">
               <p className="text-sm text-muted-foreground mb-4">
-                Configure how and when you receive notifications.
+                Configurez comment et quand vous recevez les notifications.
               </p>
               
               <div className="space-y-4">
@@ -225,8 +225,8 @@ export function SettingsPage() {
                       <MailIcon className="h-5 w-5 text-primary-600 dark:text-primary-300" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Email Notifications</h3>
-                      <p className="text-sm text-muted-foreground">Receive updates and alerts via email</p>
+                      <h3 className="font-medium">Notifications par email</h3>
+                      <p className="text-sm text-muted-foreground">Recevoir les mises à jour et alertes par email</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -248,8 +248,8 @@ export function SettingsPage() {
                       <BellRing className="h-5 w-5 text-primary-600 dark:text-primary-300" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Push Notifications</h3>
-                      <p className="text-sm text-muted-foreground">Receive in-app notifications</p>
+                      <h3 className="font-medium">Notifications push</h3>
+                      <p className="text-sm text-muted-foreground">Recevoir des notifications dans l'application</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -271,8 +271,8 @@ export function SettingsPage() {
                       <Bell className="h-5 w-5 text-primary-600 dark:text-primary-300" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Digest Frequency</h3>
-                      <p className="text-sm text-muted-foreground">How often you receive summary emails</p>
+                      <h3 className="font-medium">Fréquence des résumés</h3>
+                      <p className="text-sm text-muted-foreground">À quelle fréquence vous recevez des emails récapitulatifs</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -289,9 +289,9 @@ export function SettingsPage() {
                         }));
                       }}
                     >
-                      <option value="daily">Daily</option>
-                      <option value="weekly">Weekly</option>
-                      <option value="never">Never</option>
+                      <option value="daily">Quotidien</option>
+                      <option value="weekly">Hebdomadaire</option>
+                      <option value="never">Jamais</option>
                     </select>
                   </div>
                 </div>
@@ -302,11 +302,11 @@ export function SettingsPage() {
           {/* Privacy Settings */}
           <div className="bg-white dark:bg-gray-800 rounded-lg border shadow-sm">
             <div className="px-6 py-4 border-b">
-              <h2 className="text-xl font-semibold">Privacy Settings</h2>
+              <h2 className="text-xl font-semibold">Paramètres de confidentialité</h2>
             </div>
             <div className="p-6">
               <p className="text-sm text-muted-foreground mb-4">
-                Control your privacy and data sharing preferences.
+                Contrôlez vos préférences de confidentialité et de partage de données.
               </p>
               
               <div className="space-y-4">
@@ -316,8 +316,8 @@ export function SettingsPage() {
                       <Eye className="h-5 w-5 text-primary-600 dark:text-primary-300" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Profile Visibility</h3>
-                      <p className="text-sm text-muted-foreground">Who can see your profile information</p>
+                      <h3 className="font-medium">Visibilité du profil</h3>
+                      <p className="text-sm text-muted-foreground">Qui peut voir les informations de votre profil</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -326,8 +326,8 @@ export function SettingsPage() {
                       value={settings.privacy.profileVisibility}
                       onChange={(e) => handlePrivacyToggle('profileVisibility', e.target.value)}
                     >
-                      <option value="private">Only Me</option>
-                      <option value="institution">My Institution</option>
+                      <option value="private">Moi uniquement</option>
+                      <option value="institution">Mon institution</option>
                       <option value="public">Public</option>
                     </select>
                   </div>
@@ -339,8 +339,8 @@ export function SettingsPage() {
                       <Lock className="h-5 w-5 text-primary-600 dark:text-primary-300" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Activity Tracking</h3>
-                      <p className="text-sm text-muted-foreground">Allow tracking of your learning progress</p>
+                      <h3 className="font-medium">Suivi des activités</h3>
+                      <p className="text-sm text-muted-foreground">Autoriser le suivi de votre progression d'apprentissage</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -369,12 +369,12 @@ export function SettingsPage() {
               {isSaving ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Saving...
+                  Enregistrement...
                 </>
               ) : (
                 <>
                   <Save className="mr-2 h-4 w-4" />
-                  Save Settings
+                  Enregistrer les paramètres
                 </>
               )}
             </Button>
@@ -385,7 +385,7 @@ export function SettingsPage() {
               className="flex-1"
             >
               <LogOut className="mr-2 h-4 w-4" />
-              Sign Out
+              Se déconnecter
             </Button>
           </div>
         </div>

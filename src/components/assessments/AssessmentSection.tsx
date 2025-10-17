@@ -40,11 +40,14 @@ export function AssessmentSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Évaluations de Conformité
+            Évaluations de Connaissances en Protection des Données
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Évaluations spécifiques par rôle conçues pour évaluer la conformité de votre institution avec 
-            les réglementations sur la protection des données éducatives, incluant le RGPD, la Loi Ivoirienne, et plus.
+            Évaluations éducatives spécifiques par rôle conçues pour <strong>mesurer vos connaissances</strong> sur 
+            les réglementations de protection des données éducatives, incluant le RGPD, la Loi Ivoirienne, ARTCI, et plus.
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-500 mt-3 italic">
+            Note : Ces évaluations sont des outils de formation et ne constituent pas un audit de conformité légale.
           </p>
         </div>
         

@@ -140,9 +140,9 @@ export function TeacherDashboard() {
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Teacher Dashboard</h1>
+            <h1 className="text-3xl font-bold mb-2">Tableau de Bord Corps Enseignant</h1>
             <p className="text-muted-foreground">
-              Your privacy compliance progress and classroom management
+              Votre progression en conformité et gestion de classe
             </p>
           </div>
           <div className="flex items-center gap-2">

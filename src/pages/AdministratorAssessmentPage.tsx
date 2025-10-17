@@ -41,7 +41,7 @@ export function AdministratorAssessmentPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedAssessments = filteredAssessments.slice(startIndex, startIndex + itemsPerPage);
 
-  const regulations = ['all', 'ferpa', 'coppa', 'gdpr', 'general'];
+  const regulations = ['all', 'rgpd', 'loi-ivoirienne', 'artci', 'general'];
   const levels = ['all', 'beginner', 'intermediate', 'advanced'];
 
   return (
@@ -50,10 +50,10 @@ export function AdministratorAssessmentPage() {
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          Administrator Assessments
+          Évaluations Direction Générale
         </h1>
         <p className="text-muted-foreground">
-          Complete these assessments to evaluate and improve your privacy compliance knowledge ({filteredAssessments.length} assessments)
+          Complétez ces évaluations pour évaluer et améliorer vos connaissances en conformité ({filteredAssessments.length} évaluations)
         </p>
       </div>
       
@@ -65,7 +65,7 @@ export function AdministratorAssessmentPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Search assessments..."
+              placeholder="Rechercher des évaluations..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-sm"
@@ -81,7 +81,7 @@ export function AdministratorAssessmentPage() {
             >
               {regulations.map(reg => (
                 <option key={reg} value={reg}>
-                  {reg === 'all' ? 'All Regulations' : reg.toUpperCase()}
+                  {reg === 'all' ? 'Toutes les Réglementations' : reg.toUpperCase()}
                 </option>
               ))}
             </select>
@@ -96,7 +96,7 @@ export function AdministratorAssessmentPage() {
             >
               {levels.map(level => (
                 <option key={level} value={level}>
-                  {level === 'all' ? 'All Levels' : level.charAt(0).toUpperCase() + level.slice(1)}
+                  {level === 'all' ? 'Tous les Niveaux' : level.charAt(0).toUpperCase() + level.slice(1)}
                 </option>
               ))}
             </select>
@@ -108,9 +108,9 @@ export function AdministratorAssessmentPage() {
               onChange={(e) => setSortBy(e.target.value)}
               className="w-full px-3 py-2 border border-input rounded-md bg-background text-sm"
             >
-              <option value="title">Sort by Title</option>
-              <option value="time">Sort by Time</option>
-              <option value="questions">Sort by Questions</option>
+              <option value="title">Trier par Titre</option>
+              <option value="time">Trier par Temps</option>
+              <option value="questions">Trier par Questions</option>
             </select>
           </div>
         </div>
@@ -118,10 +118,10 @@ export function AdministratorAssessmentPage() {
         {/* Active Filters */}
         {(searchTerm || selectedRegulation !== 'all' || selectedLevel !== 'all') && (
           <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
-            <span className="text-sm text-muted-foreground">Active filters:</span>
+            <span className="text-sm text-muted-foreground">Filtres actifs :</span>
             {searchTerm && (
               <Badge variant="general">
-                Search: "{searchTerm}"
+                Recherche: "{searchTerm}"
               </Badge>
             )}
             {selectedRegulation !== 'all' && (
@@ -145,7 +145,7 @@ export function AdministratorAssessmentPage() {
               }}
               className="h-6 px-2 text-xs"
             >
-              Clear all
+              Effacer tout
             </Button>
           </div>
         )}

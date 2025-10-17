@@ -16,9 +16,9 @@ export function TermsPage() {
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Registration
             </Link>
-            <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>
+            <h1 className="text-3xl font-bold mb-2">Conditions d'Utilisation</h1>
             <p className="text-muted-foreground">
-              Effective Date: January 1, 2025 | Last Updated: January 1, 2025
+              Date d'Entrée en Vigueur : 1er Janvier 2025 | Dernière Mise à Jour : 1er Janvier 2025
             </p>
           </div>
 
