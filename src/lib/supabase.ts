@@ -4,8 +4,8 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js'
 // Handle missing environment variables gracefully
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-const defaultSchema = import.meta.env.VITE_SUPABASE_SCHEMA || 'public';
-const organizationSchema = import.meta.env.VITE_SUPABASE_ORGANIZATION_SCHEMA || 'organization_specific';
+const defaultSchema = import.meta.env.VITE_SUPABASE_SCHEMA || 'edusoluce_public';
+const organizationSchema = import.meta.env.VITE_SUPABASE_ORGANIZATION_SCHEMA || 'edusoluce_org';
 const enableSchemaDifferentiation = import.meta.env.VITE_ENABLE_SCHEMA_DIFFERENTIATION === 'true';
 
 // Extensive logging during development only

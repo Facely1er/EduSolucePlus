@@ -1,0 +1,64 @@
+# EduSoluce Environment Variables
+
+## Production Environment (Vercel)
+
+```env
+VITE_SUPABASE_URL=https://snrpdosiuwmdaegxkqux.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNucnBkb3NpdXdtZGFlZ3hrcXV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkyMTA5MTYsImV4cCI6MjA3NDc4NjkxNn0.tl_ipfmxSwMNLBQ-QeqQPyp_w6xvocTtXqaFGHHFwe0
+VITE_ENABLE_SCHEMA_DIFFERENTIATION=true
+VITE_SUPABASE_SCHEMA=edusoluce_public
+VITE_SUPABASE_ORGANIZATION_SCHEMA=edusoluce_org
+VITE_APP_URL=https://edusoluce-africa.vercel.app
+VITE_ENVIRONMENT=production
+VITE_APP_LOCALE=fr-CI
+VITE_APP_TIMEZONE=Africa/Abidjan
+VITE_APP_CURRENCY=XOF
+VITE_APP_REGION=africa
+VITE_SUPPORT_EMAIL=support@edusoluce-africa.com
+VITE_CONTACT_PHONE=+225 XX XX XX XX XX
+VITE_ENABLE_ANALYTICS=true
+VITE_ENABLE_SENTRY=false
+VITE_ENABLE_OFFLINE=true
+VITE_MAX_RETRIES=3
+VITE_REQUEST_TIMEOUT=30000
+VITE_ENABLE_RGPD_MODE=true
+VITE_ENABLE_ARTCI_INTEGRATION=true
+VITE_ARTCI_API_URL=https://www.artci.ci/api
+VITE_BACKEND_URL=https://api.edusoluce-africa.com
+VITE_API_VERSION=v1
+```
+
+## Development Environment (.env.local)
+
+```env
+VITE_SUPABASE_URL=https://snrpdosiuwmdaegxkqux.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNucnBkb3NpdXdtZGFlZ3hrcXV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkyMTA5MTYsImV4cCI6MjA3NDc4NjkxNn0.tl_ipfmxSwMNLBQ-QeqQPyp_w6xvocTtXqaFGHHFwe0
+VITE_ENABLE_SCHEMA_DIFFERENTIATION=true
+VITE_SUPABASE_SCHEMA=edusoluce_public
+VITE_SUPABASE_ORGANIZATION_SCHEMA=edusoluce_org
+VITE_APP_URL=http://localhost:4173
+VITE_ENVIRONMENT=development
+VITE_APP_LOCALE=fr-CI
+VITE_APP_TIMEZONE=Africa/Abidjan
+VITE_APP_CURRENCY=XOF
+VITE_APP_REGION=africa
+VITE_SUPPORT_EMAIL=support@edusoluce-africa.com
+VITE_CONTACT_PHONE=+225 XX XX XX XX XX
+VITE_ENABLE_ANALYTICS=false
+VITE_ENABLE_SENTRY=false
+VITE_ENABLE_OFFLINE=true
+VITE_MAX_RETRIES=3
+VITE_REQUEST_TIMEOUT=30000
+VITE_ENABLE_RGPD_MODE=true
+VITE_ENABLE_ARTCI_INTEGRATION=true
+VITE_ARTCI_API_URL=https://www.artci.ci/api
+VITE_BACKEND_URL=http://localhost:3001
+VITE_API_VERSION=v1
+```
+
+## Service Role Key (Local Only)
+
+```env
+# Add this to .env.local only - NEVER commit this file
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+```

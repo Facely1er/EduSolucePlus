@@ -1,7 +1,7 @@
 // src/hooks/useSupabase.ts
 import { useState, useEffect } from 'react'
 import { supabase, type Profile, type AssessmentResult, type TrainingProgress } from '../lib/supabase'
-import { schemaService } from '../services/schemaService'
+import { SchemaService } from '../services/schemaService'
 import { progressStorage, networkStatus } from '../utils/storage';
 
 // Authentication hook

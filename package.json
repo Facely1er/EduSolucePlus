@@ -21,7 +21,10 @@
     "migrate:schemas": "node scripts/migrate-to-differentiated-schemas.js",
     "migrate:schemas:dry-run": "node scripts/migrate-to-differentiated-schemas.js --dry-run",
     "migrate:schemas:help": "node scripts/migrate-to-differentiated-schemas.js --help",
-    "test:schemas": "node scripts/test-schema-config.js"
+    "test:schemas": "node scripts/test-schema-config.js",
+    "test:schemas:isolation": "node scripts/test-schema-config.js --test-isolation",
+    "test:schemas:rls": "node scripts/test-schema-config.js --test-rls",
+    "test:schemas:performance": "node scripts/test-schema-config.js --test-performance"
   },
   "dependencies": {
     "@sentry/react": "^9.37.0",

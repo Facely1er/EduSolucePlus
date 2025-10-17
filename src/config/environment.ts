@@ -8,10 +8,10 @@ const requiredEnvVars = {
   VITE_ENVIRONMENT: import.meta.env.VITE_ENVIRONMENT || 'development'
 };
 
-// Schema configuration
+// Schema configuration with differentiated naming
 const schemaConfig = {
-  default: import.meta.env.VITE_SUPABASE_SCHEMA || 'public',
-  organization: import.meta.env.VITE_SUPABASE_ORGANIZATION_SCHEMA || 'organization_specific',
+  default: import.meta.env.VITE_SUPABASE_SCHEMA || 'edusoluce_public',
+  organization: import.meta.env.VITE_SUPABASE_ORGANIZATION_SCHEMA || 'edusoluce_org',
   differentiationEnabled: import.meta.env.VITE_ENABLE_SCHEMA_DIFFERENTIATION === 'true'
 };
 
